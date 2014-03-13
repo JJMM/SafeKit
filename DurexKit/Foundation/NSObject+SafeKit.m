@@ -25,7 +25,7 @@
 @implementation NSObject(SafeKit)
 //- (id)SKperformSelector:(SEL)aSelector{
 //    if ([self respondsToSelector:aSelector]) {
-//        [self SKperformSelector:aSelector];
+//        return [self SKperformSelector:aSelector];
 //    }
 //    return nil;
 //}
