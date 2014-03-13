@@ -11,6 +11,4 @@
 @interface NSObject(swizzle)
 +(void)swizzleMethod:(SEL)src target:(SEL)tar;
 +(void)swizzleMethod:(SEL)src targetClass:(NSString *)tarClass target:(SEL)tar;
-
--(void)sssss;
 @end

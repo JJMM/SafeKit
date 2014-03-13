@@ -22,8 +22,4 @@
     Method tarMethod = class_getInstanceMethod(NSClassFromString(tarClass),tar);
     method_exchangeImplementations(srcMethod, tarMethod);
 }
-
--(void)sssss{
-
-}
 @end

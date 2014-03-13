@@ -9,6 +9,7 @@
 #import "NSObject+SafeKit.h"
 #import <objc/runtime.h>
 #import "NSException+SafeKit.h"
+#import "NSObject+swizzle.h"
 
 #define TRY_BODY(__target) \
 @try {\
@@ -22,7 +23,12 @@
 }
 
 @implementation NSObject(SafeKit)
-
+//- (id)SKperformSelector:(SEL)aSelector{
+//    if ([self respondsToSelector:aSelector]) {
+//        [self SKperformSelector:aSelector];
+//    }
+//    return nil;
+//}
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 - (id)performSelectorSafe:(SEL)aSelector{
@@ -41,4 +47,9 @@
     return ret;
 }
 #pragma clang diagnostic pop
+
+//+ (void) load{
+//    [self swizzleMethod:@selector(SKperformSelector:) target:@selector(performSelector:)];
+//
+//}
 @end
