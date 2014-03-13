@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A12B2DE18D17ECE0084B5F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A12B2DD18D17ECE0084B5F9 /* Foundation.framework */; };
+		2A12B2E018D17ECE0084B5F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A12B2DF18D17ECE0084B5F9 /* CoreGraphics.framework */; };
+		2A12B2E218D17ECE0084B5F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A12B2E118D17ECE0084B5F9 /* UIKit.framework */; };
+		2A12B2E818D17ECE0084B5F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A12B2E618D17ECE0084B5F9 /* InfoPlist.strings */; };
+		2A12B2EA18D17ECE0084B5F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B2E918D17ECE0084B5F9 /* main.m */; };
+		2A12B2EE18D17ECE0084B5F9 /* DKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B2ED18D17ECE0084B5F9 /* DKAppDelegate.m */; };
+		2A12B2F018D17ECE0084B5F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A12B2EF18D17ECE0084B5F9 /* Images.xcassets */; };
+		2A12B2F718D17ECE0084B5F9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A12B2F618D17ECE0084B5F9 /* XCTest.framework */; };
+		2A12B2F818D17ECE0084B5F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A12B2DD18D17ECE0084B5F9 /* Foundation.framework */; };
+		2A12B2F918D17ECE0084B5F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A12B2E118D17ECE0084B5F9 /* UIKit.framework */; };
+		2A12B30118D17ECE0084B5F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A12B2FF18D17ECE0084B5F9 /* InfoPlist.strings */; };
+		2A12B30318D17ECE0084B5F9 /* DurexKitExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B30218D17ECE0084B5F9 /* DurexKitExampleTests.m */; };
+		2A12B32318D17F250084B5F9 /* NSArray+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B31D18D17F250084B5F9 /* NSArray+SafeKit.m */; };
+		2A12B32418D17F250084B5F9 /* NSObject+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B31F18D17F250084B5F9 /* NSObject+SafeKit.m */; };
+		2A12B32518D17F250084B5F9 /* NSObject+swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B32118D17F250084B5F9 /* NSObject+swizzle.m */; };
+		2A12B32C18D17F990084B5F9 /* CUSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B32918D17F990084B5F9 /* CUSMainViewController.m */; };
+		2A12B32D18D17F990084B5F9 /* CUSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B32B18D17F990084B5F9 /* CUSViewController.m */; };
+		2A12B33118D184BD0084B5F9 /* NSMutableArray+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33018D184BD0084B5F9 /* NSMutableArray+SafeKit.m */; };
+		2A12B33418D1896F0084B5F9 /* NSDictionary+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33318D1896F0084B5F9 /* NSDictionary+SafeKit.m */; };
+		2A12B33718D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33618D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m */; };
+		2A12B33B18D19CF50084B5F9 /* NSException+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33A18D19CF50084B5F9 /* NSException+SafeKit.m */; };
+		2A12B33F18D19E960084B5F9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A12B33D18D19E960084B5F9 /* Icon.png */; };
+		2A12B34018D19E960084B5F9 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A12B33E18D19E960084B5F9 /* Icon@2x.png */; };
+		2A12B34A18D1A0BC0084B5F9 /* CYRLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34318D1A0BC0084B5F9 /* CYRLayoutManager.m */; };
+		2A12B34B18D1A0BC0084B5F9 /* CYRTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34518D1A0BC0084B5F9 /* CYRTextStorage.m */; };
+		2A12B34C18D1A0BC0084B5F9 /* CYRTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34718D1A0BC0084B5F9 /* CYRTextView.m */; };
+		2A12B34D18D1A0BC0084B5F9 /* CYRToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34918D1A0BC0084B5F9 /* CYRToken.m */; };
+		2A12B35018D1A0C30084B5F9 /* QEDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34F18D1A0C30084B5F9 /* QEDTextView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A12B2FA18D17ECE0084B5F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A12B2D218D17ECE0084B5F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A12B2D918D17ECE0084B5F9;
+			remoteInfo = DurexKitExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A12B2DA18D17ECE0084B5F9 /* DurexKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DurexKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A12B2DD18D17ECE0084B5F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2A12B2DF18D17ECE0084B5F9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2A12B2E118D17ECE0084B5F9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2A12B2E518D17ECE0084B5F9 /* DurexKitExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DurexKitExample-Info.plist"; sourceTree = "<group>"; };
+		2A12B2E718D17ECE0084B5F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2A12B2E918D17ECE0084B5F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A12B2EB18D17ECE0084B5F9 /* DurexKitExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DurexKitExample-Prefix.pch"; sourceTree = "<group>"; };
+		2A12B2EC18D17ECE0084B5F9 /* DKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKAppDelegate.h; sourceTree = "<group>"; };
+		2A12B2ED18D17ECE0084B5F9 /* DKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKAppDelegate.m; sourceTree = "<group>"; };
+		2A12B2EF18D17ECE0084B5F9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2A12B2F518D17ECE0084B5F9 /* DurexKitExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DurexKitExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A12B2F618D17ECE0084B5F9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2A12B2FE18D17ECE0084B5F9 /* DurexKitExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DurexKitExampleTests-Info.plist"; sourceTree = "<group>"; };
+		2A12B30018D17ECE0084B5F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2A12B30218D17ECE0084B5F9 /* DurexKitExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DurexKitExampleTests.m; sourceTree = "<group>"; };
+		2A12B31B18D17F250084B5F9 /* Foundation+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+SafeKit.h"; sourceTree = "<group>"; };
+		2A12B31C18D17F250084B5F9 /* NSArray+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SafeKit.h"; sourceTree = "<group>"; };
+		2A12B31D18D17F250084B5F9 /* NSArray+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeKit.m"; sourceTree = "<group>"; };
+		2A12B31E18D17F250084B5F9 /* NSObject+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SafeKit.h"; sourceTree = "<group>"; };
+		2A12B31F18D17F250084B5F9 /* NSObject+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SafeKit.m"; sourceTree = "<group>"; };
+		2A12B32018D17F250084B5F9 /* NSObject+swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+swizzle.h"; sourceTree = "<group>"; };
+		2A12B32118D17F250084B5F9 /* NSObject+swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+swizzle.m"; sourceTree = "<group>"; };
+		2A12B32618D17F6F0084B5F9 /* DurexKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DurexKit.h; sourceTree = "<group>"; };
+		2A12B32818D17F990084B5F9 /* CUSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSMainViewController.h; sourceTree = "<group>"; };
+		2A12B32918D17F990084B5F9 /* CUSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSMainViewController.m; sourceTree = "<group>"; };
+		2A12B32A18D17F990084B5F9 /* CUSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSViewController.h; sourceTree = "<group>"; };
+		2A12B32B18D17F990084B5F9 /* CUSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSViewController.m; sourceTree = "<group>"; };
+		2A12B32F18D184BD0084B5F9 /* NSMutableArray+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeKit.h"; sourceTree = "<group>"; };
+		2A12B33018D184BD0084B5F9 /* NSMutableArray+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafeKit.m"; sourceTree = "<group>"; };
+		2A12B33218D1896F0084B5F9 /* NSDictionary+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeKit.h"; sourceTree = "<group>"; };
+		2A12B33318D1896F0084B5F9 /* NSDictionary+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeKit.m"; sourceTree = "<group>"; };
+		2A12B33518D189DA0084B5F9 /* NSMutableDictionary+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+SafeKit.h"; sourceTree = "<group>"; };
+		2A12B33618D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+SafeKit.m"; sourceTree = "<group>"; };
+		2A12B33918D19CF50084B5F9 /* NSException+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSException+SafeKit.h"; sourceTree = "<group>"; };
+		2A12B33A18D19CF50084B5F9 /* NSException+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSException+SafeKit.m"; sourceTree = "<group>"; };
+		2A12B33D18D19E960084B5F9 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		2A12B33E18D19E960084B5F9 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		2A12B34218D1A0BC0084B5F9 /* CYRLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRLayoutManager.h; sourceTree = "<group>"; };
+		2A12B34318D1A0BC0084B5F9 /* CYRLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRLayoutManager.m; sourceTree = "<group>"; };
+		2A12B34418D1A0BC0084B5F9 /* CYRTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRTextStorage.h; sourceTree = "<group>"; };
+		2A12B34518D1A0BC0084B5F9 /* CYRTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRTextStorage.m; sourceTree = "<group>"; };
+		2A12B34618D1A0BC0084B5F9 /* CYRTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRTextView.h; sourceTree = "<group>"; };
+		2A12B34718D1A0BC0084B5F9 /* CYRTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRTextView.m; sourceTree = "<group>"; };
+		2A12B34818D1A0BC0084B5F9 /* CYRToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRToken.h; sourceTree = "<group>"; };
+		2A12B34918D1A0BC0084B5F9 /* CYRToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRToken.m; sourceTree = "<group>"; };
+		2A12B34E18D1A0C30084B5F9 /* QEDTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QEDTextView.h; sourceTree = "<group>"; };
+		2A12B34F18D1A0C30084B5F9 /* QEDTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QEDTextView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A12B2D718D17ECE0084B5F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A12B2E018D17ECE0084B5F9 /* CoreGraphics.framework in Frameworks */,
+				2A12B2E218D17ECE0084B5F9 /* UIKit.framework in Frameworks */,
+				2A12B2DE18D17ECE0084B5F9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A12B2F218D17ECE0084B5F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A12B2F718D17ECE0084B5F9 /* XCTest.framework in Frameworks */,
+				2A12B2F918D17ECE0084B5F9 /* UIKit.framework in Frameworks */,
+				2A12B2F818D17ECE0084B5F9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A12B2D118D17ECE0084B5F9 = {
+			isa = PBXGroup;
+			children = (
+				2A12B33C18D19E6A0084B5F9 /* Resource */,
+				2A12B31918D17F250084B5F9 /* DurexKit */,
+				2A12B2E318D17ECE0084B5F9 /* DurexKitExample */,
+				2A12B2FC18D17ECE0084B5F9 /* DurexKitExampleTests */,
+				2A12B2DC18D17ECE0084B5F9 /* Frameworks */,
+				2A12B2DB18D17ECE0084B5F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A12B2DB18D17ECE0084B5F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A12B2DA18D17ECE0084B5F9 /* DurexKitExample.app */,
+				2A12B2F518D17ECE0084B5F9 /* DurexKitExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A12B2DC18D17ECE0084B5F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A12B2DD18D17ECE0084B5F9 /* Foundation.framework */,
+				2A12B2DF18D17ECE0084B5F9 /* CoreGraphics.framework */,
+				2A12B2E118D17ECE0084B5F9 /* UIKit.framework */,
+				2A12B2F618D17ECE0084B5F9 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A12B2E318D17ECE0084B5F9 /* DurexKitExample */ = {
+			isa = PBXGroup;
+			children = (
+				2A12B34118D1A0BC0084B5F9 /* CYRTextView */,
+				2A12B32718D17F990084B5F9 /* ExampleVC */,
+				2A12B2EC18D17ECE0084B5F9 /* DKAppDelegate.h */,
+				2A12B2ED18D17ECE0084B5F9 /* DKAppDelegate.m */,
+				2A12B2EF18D17ECE0084B5F9 /* Images.xcassets */,
+				2A12B2E418D17ECE0084B5F9 /* Supporting Files */,
+			);
+			path = DurexKitExample;
+			sourceTree = "<group>";
+		};
+		2A12B2E418D17ECE0084B5F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A12B2E518D17ECE0084B5F9 /* DurexKitExample-Info.plist */,
+				2A12B2E618D17ECE0084B5F9 /* InfoPlist.strings */,
+				2A12B2E918D17ECE0084B5F9 /* main.m */,
+				2A12B2EB18D17ECE0084B5F9 /* DurexKitExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A12B2FC18D17ECE0084B5F9 /* DurexKitExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A12B30218D17ECE0084B5F9 /* DurexKitExampleTests.m */,
+				2A12B2FD18D17ECE0084B5F9 /* Supporting Files */,
+			);
+			path = DurexKitExampleTests;
+			sourceTree = "<group>";
+		};
+		2A12B2FD18D17ECE0084B5F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A12B2FE18D17ECE0084B5F9 /* DurexKitExampleTests-Info.plist */,
+				2A12B2FF18D17ECE0084B5F9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A12B31918D17F250084B5F9 /* DurexKit */ = {
+			isa = PBXGroup;
+			children = (
+				2A12B32618D17F6F0084B5F9 /* DurexKit.h */,
+				2A12B33818D19CE00084B5F9 /* Exception */,
+				2A12B31A18D17F250084B5F9 /* Foundation */,
+			);
+			path = DurexKit;
+			sourceTree = "<group>";
+		};
+		2A12B31A18D17F250084B5F9 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				2A12B31B18D17F250084B5F9 /* Foundation+SafeKit.h */,
+				2A12B32018D17F250084B5F9 /* NSObject+swizzle.h */,
+				2A12B32118D17F250084B5F9 /* NSObject+swizzle.m */,
+				2A12B31E18D17F250084B5F9 /* NSObject+SafeKit.h */,
+				2A12B31F18D17F250084B5F9 /* NSObject+SafeKit.m */,
+				2A12B31C18D17F250084B5F9 /* NSArray+SafeKit.h */,
+				2A12B31D18D17F250084B5F9 /* NSArray+SafeKit.m */,
+				2A12B32F18D184BD0084B5F9 /* NSMutableArray+SafeKit.h */,
+				2A12B33018D184BD0084B5F9 /* NSMutableArray+SafeKit.m */,
+				2A12B33218D1896F0084B5F9 /* NSDictionary+SafeKit.h */,
+				2A12B33318D1896F0084B5F9 /* NSDictionary+SafeKit.m */,
+				2A12B33518D189DA0084B5F9 /* NSMutableDictionary+SafeKit.h */,
+				2A12B33618D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		2A12B32718D17F990084B5F9 /* ExampleVC */ = {
+			isa = PBXGroup;
+			children = (
+				2A12B32818D17F990084B5F9 /* CUSMainViewController.h */,
+				2A12B32918D17F990084B5F9 /* CUSMainViewController.m */,
+				2A12B32A18D17F990084B5F9 /* CUSViewController.h */,
+				2A12B32B18D17F990084B5F9 /* CUSViewController.m */,
+			);
+			path = ExampleVC;
+			sourceTree = "<group>";
+		};
+		2A12B33818D19CE00084B5F9 /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				2A12B33918D19CF50084B5F9 /* NSException+SafeKit.h */,
+				2A12B33A18D19CF50084B5F9 /* NSException+SafeKit.m */,
+			);
+			path = Exception;
+			sourceTree = "<group>";
+		};
+		2A12B33C18D19E6A0084B5F9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2A12B33D18D19E960084B5F9 /* Icon.png */,
+				2A12B33E18D19E960084B5F9 /* Icon@2x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		2A12B34118D1A0BC0084B5F9 /* CYRTextView */ = {
+			isa = PBXGroup;
+			children = (
+				2A12B34E18D1A0C30084B5F9 /* QEDTextView.h */,
+				2A12B34F18D1A0C30084B5F9 /* QEDTextView.m */,
+				2A12B34218D1A0BC0084B5F9 /* CYRLayoutManager.h */,
+				2A12B34318D1A0BC0084B5F9 /* CYRLayoutManager.m */,
+				2A12B34418D1A0BC0084B5F9 /* CYRTextStorage.h */,
+				2A12B34518D1A0BC0084B5F9 /* CYRTextStorage.m */,
+				2A12B34618D1A0BC0084B5F9 /* CYRTextView.h */,
+				2A12B34718D1A0BC0084B5F9 /* CYRTextView.m */,
+				2A12B34818D1A0BC0084B5F9 /* CYRToken.h */,
+				2A12B34918D1A0BC0084B5F9 /* CYRToken.m */,
+			);
+			path = CYRTextView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A12B2D918D17ECE0084B5F9 /* DurexKitExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A12B30618D17ECE0084B5F9 /* Build configuration list for PBXNativeTarget "DurexKitExample" */;
+			buildPhases = (
+				2A12B2D618D17ECE0084B5F9 /* Sources */,
+				2A12B2D718D17ECE0084B5F9 /* Frameworks */,
+				2A12B2D818D17ECE0084B5F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DurexKitExample;
+			productName = DurexKitExample;
+			productReference = 2A12B2DA18D17ECE0084B5F9 /* DurexKitExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2A12B2F418D17ECE0084B5F9 /* DurexKitExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A12B30918D17ECE0084B5F9 /* Build configuration list for PBXNativeTarget "DurexKitExampleTests" */;
+			buildPhases = (
+				2A12B2F118D17ECE0084B5F9 /* Sources */,
+				2A12B2F218D17ECE0084B5F9 /* Frameworks */,
+				2A12B2F318D17ECE0084B5F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A12B2FB18D17ECE0084B5F9 /* PBXTargetDependency */,
+			);
+			name = DurexKitExampleTests;
+			productName = DurexKitExampleTests;
+			productReference = 2A12B2F518D17ECE0084B5F9 /* DurexKitExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A12B2D218D17ECE0084B5F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DK;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = zhangyu;
+				TargetAttributes = {
+					2A12B2F418D17ECE0084B5F9 = {
+						TestTargetID = 2A12B2D918D17ECE0084B5F9;
+					};
+				};
+			};
+			buildConfigurationList = 2A12B2D518D17ECE0084B5F9 /* Build configuration list for PBXProject "DurexKitExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2A12B2D118D17ECE0084B5F9;
+			productRefGroup = 2A12B2DB18D17ECE0084B5F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A12B2D918D17ECE0084B5F9 /* DurexKitExample */,
+				2A12B2F418D17ECE0084B5F9 /* DurexKitExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A12B2D818D17ECE0084B5F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A12B2E818D17ECE0084B5F9 /* InfoPlist.strings in Resources */,
+				2A12B34018D19E960084B5F9 /* Icon@2x.png in Resources */,
+				2A12B33F18D19E960084B5F9 /* Icon.png in Resources */,
+				2A12B2F018D17ECE0084B5F9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A12B2F318D17ECE0084B5F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A12B30118D17ECE0084B5F9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A12B2D618D17ECE0084B5F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A12B34D18D1A0BC0084B5F9 /* CYRToken.m in Sources */,
+				2A12B34A18D1A0BC0084B5F9 /* CYRLayoutManager.m in Sources */,
+				2A12B35018D1A0C30084B5F9 /* QEDTextView.m in Sources */,
+				2A12B2EA18D17ECE0084B5F9 /* main.m in Sources */,
+				2A12B33B18D19CF50084B5F9 /* NSException+SafeKit.m in Sources */,
+				2A12B32C18D17F990084B5F9 /* CUSMainViewController.m in Sources */,
+				2A12B2EE18D17ECE0084B5F9 /* DKAppDelegate.m in Sources */,
+				2A12B32318D17F250084B5F9 /* NSArray+SafeKit.m in Sources */,
+				2A12B32D18D17F990084B5F9 /* CUSViewController.m in Sources */,
+				2A12B33718D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m in Sources */,
+				2A12B32418D17F250084B5F9 /* NSObject+SafeKit.m in Sources */,
+				2A12B34B18D1A0BC0084B5F9 /* CYRTextStorage.m in Sources */,
+				2A12B34C18D1A0BC0084B5F9 /* CYRTextView.m in Sources */,
+				2A12B33418D1896F0084B5F9 /* NSDictionary+SafeKit.m in Sources */,
+				2A12B32518D17F250084B5F9 /* NSObject+swizzle.m in Sources */,
+				2A12B33118D184BD0084B5F9 /* NSMutableArray+SafeKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A12B2F118D17ECE0084B5F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A12B30318D17ECE0084B5F9 /* DurexKitExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A12B2FB18D17ECE0084B5F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A12B2D918D17ECE0084B5F9 /* DurexKitExample */;
+			targetProxy = 2A12B2FA18D17ECE0084B5F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2A12B2E618D17ECE0084B5F9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A12B2E718D17ECE0084B5F9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2A12B2FF18D17ECE0084B5F9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A12B30018D17ECE0084B5F9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A12B30418D17ECE0084B5F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2A12B30518D17ECE0084B5F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A12B30718D17ECE0084B5F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DurexKitExample/DurexKitExample-Prefix.pch";
+				INFOPLIST_FILE = "DurexKitExample/DurexKitExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2A12B30818D17ECE0084B5F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DurexKitExample/DurexKitExample-Prefix.pch";
+				INFOPLIST_FILE = "DurexKitExample/DurexKitExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2A12B30A18D17ECE0084B5F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DurexKitExample.app/DurexKitExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DurexKitExample/DurexKitExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DurexKitExampleTests/DurexKitExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2A12B30B18D17ECE0084B5F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DurexKitExample.app/DurexKitExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DurexKitExample/DurexKitExample-Prefix.pch";
+				INFOPLIST_FILE = "DurexKitExampleTests/DurexKitExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A12B2D518D17ECE0084B5F9 /* Build configuration list for PBXProject "DurexKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A12B30418D17ECE0084B5F9 /* Debug */,
+				2A12B30518D17ECE0084B5F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A12B30618D17ECE0084B5F9 /* Build configuration list for PBXNativeTarget "DurexKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A12B30718D17ECE0084B5F9 /* Debug */,
+				2A12B30818D17ECE0084B5F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A12B30918D17ECE0084B5F9 /* Build configuration list for PBXNativeTarget "DurexKitExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A12B30A18D17ECE0084B5F9 /* Debug */,
+				2A12B30B18D17ECE0084B5F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A12B2D218D17ECE0084B5F9 /* Project object */;
+}
