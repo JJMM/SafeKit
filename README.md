@@ -1,7 +1,7 @@
 DurexKit
 ========
 
-A SafeKit for iOS.<br>
+An open source SafeKit for iOS.<br>
 Our goal is no crash.<br>
 ![image](https://github.com/JJMM/CUSResources/raw/master/DurexKitIntr.png)
 
