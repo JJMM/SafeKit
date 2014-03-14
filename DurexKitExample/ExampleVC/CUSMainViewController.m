@@ -29,6 +29,8 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    [SafeKitLog logOn];
+    [SafeKitLog logOff];
     QEDTextView *textView = [[QEDTextView alloc] initWithFrame:self.view.bounds];
     textView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     textView.delegate = self;
