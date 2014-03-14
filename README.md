@@ -22,8 +22,16 @@ Our goal is no crash.<br>
 
 ## Log
 ```objective-c
-[SafeKitLog logOn];
-[SafeKitLog logOff];
+typedef enum{
+    SafeKitLogTypeNone,
+    SafeKitLogTypeInfo,
+    SafeKitLogTypeDebugger,
+    SafeKitLogTypeError//unimplementate
+} SafeKitLogType;
+
+[SafeKitLog setLogType:SafeKitLogTypeNone];
+[SafeKitLog setLogType:SafeKitLogTypeInfo];
+[SafeKitLog setLogType:SafeKitLogTypeDebugger];
 ```
 ## License
 

@@ -7,6 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+
+typedef enum{
+    SafeKitLogTypeNone,
+    SafeKitLogTypeInfo,
+    SafeKitLogTypeDebugger,
+    SafeKitLogTypeError//unimplementate
+} SafeKitLogType;
+
 @interface SafeKitPrinter : NSObject
 -(void)printv:(NSString *)format withArgs:(va_list)args;
 @end
@@ -18,10 +26,9 @@
 
 +(SafeKitLog *)shareInstance;
 -(void)log:(NSString *)format, ...NS_FORMAT_FUNCTION(1,2);
-
-+(BOOL)iSLogOn;
-+(void)logOn;
-+(void)logOff;
+-(void)logExc:(NSString *)format, ...NS_FORMAT_FUNCTION(1,2);
++(SafeKitLogType)getLogType;
++(void)setLogType:(SafeKitLogType)logType;//Default is SafeKitLogTypeInfo
 @end
 
 
