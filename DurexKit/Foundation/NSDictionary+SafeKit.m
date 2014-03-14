@@ -7,12 +7,7 @@
 //
 
 #import "NSDictionary+SafeKit.h"
-
+#import "SafeKitLog.h"
 @implementation NSDictionary(SafeKit)
 
-//+ (void) load{
-//    [self swizzleMethod:@selector(SKobjectAtIndex:) targetClass:@"__NSArrayI" target:@selector(objectAtIndex:)];
-//    
-//    [self swizzleMethod:@selector(SKarrayByAddingObject:) targetClass:@"__NSArrayI" target:@selector(arrayByAddingObject:)];
-//}
 @end

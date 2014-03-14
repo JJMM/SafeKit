@@ -8,17 +8,18 @@
 
 #import "NSArray+SafeKit.h"
 #import "NSObject+swizzle.h"
-
+#import "SafeKitLog.h"
 @implementation NSArray(SafeKit)
 -(id)SKobjectAtIndex:(NSUInteger)index{
-//    NSLog(@"===NSArray(SafeKit)===");
     if (index >= [self count]) {
+        [[SafeKitLog shareInstance]log:@"index[%ld] >= count[%ld]",(long)index ,(long)[self count]];
         return nil;
     }
     return [self SKobjectAtIndex:index];
 }
 - (NSArray *)SKarrayByAddingObject:(id)anObject{
     if (anObject) {
+        [[SafeKitLog shareInstance]log:@"object is nil"];
         return [self SKarrayByAddingObject:anObject];
     }
     return nil;

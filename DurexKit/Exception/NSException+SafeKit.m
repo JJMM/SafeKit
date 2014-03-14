@@ -7,11 +7,13 @@
 //
 
 #import "NSException+SafeKit.h"
+#import "SafeKitLog.h"
+#import "SafeKitLog.h"
 
 @implementation NSException(SafeKit)
 -(void)printStackTrace{
     NSString *exceptionStr = [NSException formatExceptionToString:self];
-    NSLog(@"%@",exceptionStr);
+    [[SafeKitLog shareInstance]log:@"%@",exceptionStr];
 }
 
 +(NSString *)formatExceptionToString:(NSException *)exception {

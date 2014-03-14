@@ -8,11 +8,11 @@
 
 #import "NSMutableArray+SafeKit.h"
 #import "NSObject+swizzle.h"
-
+#import "SafeKitLog.h"
 @implementation NSMutableArray(SafeKit)
 -(id)SKobjectAtIndex:(NSUInteger)index{
-//     NSLog(@"===NSMutableArray(SafeKit)===");
     if (index >= [self count]) {
+        [[SafeKitLog shareInstance]log:@"index[%ld] >= count[%ld]",(long)index ,(long)[self count]];
         return nil;
     }
     return [self SKobjectAtIndex:index];
@@ -32,9 +32,11 @@
 }
 - (void)SKinsertObject:(id)anObject atIndex:(NSUInteger)index{
     if (index > [self count]) {
+        [[SafeKitLog shareInstance]log:@"index[%ld] > count[%ld]",(long)index ,(long)[self count]];
         return;
     }
     if (!anObject) {
+        [[SafeKitLog shareInstance]log:@"object is nil"];
         return;
     }
     [self SKinsertObject:anObject atIndex:index];
@@ -42,15 +44,18 @@
 
 - (void)SKremoveObjectAtIndex:(NSUInteger)index{
     if (index >= [self count]) {
+        [[SafeKitLog shareInstance]log:@"index[%ld] >= count[%ld]",(long)index ,(long)[self count]];
         return;
     }
     return [self SKremoveObjectAtIndex:index];
 }
 - (void)SKreplaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject{
     if (index >= [self count]) {
+        [[SafeKitLog shareInstance]log:@"index[%ld] >= count[%ld]",(long)index ,(long)[self count]];
         return;
     }
     if (!anObject) {
+        [[SafeKitLog shareInstance]log:@"object is nil"];
         return;
     }
     [self SKreplaceObjectAtIndex:index withObject:anObject];

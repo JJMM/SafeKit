@@ -35,6 +35,7 @@
 		2A12B34C18D1A0BC0084B5F9 /* CYRTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34718D1A0BC0084B5F9 /* CYRTextView.m */; };
 		2A12B34D18D1A0BC0084B5F9 /* CYRToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34918D1A0BC0084B5F9 /* CYRToken.m */; };
 		2A12B35018D1A0C30084B5F9 /* QEDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34F18D1A0C30084B5F9 /* QEDTextView.m */; };
+		2A983BAD18D2A65D00FF84F4 /* SafeKitLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A983BAC18D2A65D00FF84F4 /* SafeKitLog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		2A12B34918D1A0BC0084B5F9 /* CYRToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRToken.m; sourceTree = "<group>"; };
 		2A12B34E18D1A0C30084B5F9 /* QEDTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QEDTextView.h; sourceTree = "<group>"; };
 		2A12B34F18D1A0C30084B5F9 /* QEDTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QEDTextView.m; sourceTree = "<group>"; };
+		2A983BAB18D2A65D00FF84F4 /* SafeKitLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeKitLog.h; sourceTree = "<group>"; };
+		2A983BAC18D2A65D00FF84F4 /* SafeKitLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafeKitLog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				2A12B32618D17F6F0084B5F9 /* DurexKit.h */,
+				2A983BAA18D2A65700FF84F4 /* Log */,
 				2A12B33818D19CE00084B5F9 /* Exception */,
 				2A12B31A18D17F250084B5F9 /* Foundation */,
 			);
@@ -270,6 +274,15 @@
 				2A12B34918D1A0BC0084B5F9 /* CYRToken.m */,
 			);
 			path = CYRTextView;
+			sourceTree = "<group>";
+		};
+		2A983BAA18D2A65700FF84F4 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				2A983BAB18D2A65D00FF84F4 /* SafeKitLog.h */,
+				2A983BAC18D2A65D00FF84F4 /* SafeKitLog.m */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +396,7 @@
 				2A12B32418D17F250084B5F9 /* NSObject+SafeKit.m in Sources */,
 				2A12B34B18D1A0BC0084B5F9 /* CYRTextStorage.m in Sources */,
 				2A12B34C18D1A0BC0084B5F9 /* CYRTextView.m in Sources */,
+				2A983BAD18D2A65D00FF84F4 /* SafeKitLog.m in Sources */,
 				2A12B33418D1896F0084B5F9 /* NSDictionary+SafeKit.m in Sources */,
 				2A12B32518D17F250084B5F9 /* NSObject+swizzle.m in Sources */,
 				2A12B33118D184BD0084B5F9 /* NSMutableArray+SafeKit.m in Sources */,
