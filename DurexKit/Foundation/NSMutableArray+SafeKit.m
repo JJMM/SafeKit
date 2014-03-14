@@ -62,12 +62,15 @@
 }
 
 + (void) load{
-    [self swizzleMethod:@selector(SKobjectAtIndex:) targetClass:@"__NSArrayM" target:@selector(objectAtIndex:)];
-    [self swizzleMethod:@selector(SKarrayByAddingObject:) targetClass:@"__NSArrayM" target:@selector(arrayByAddingObject:)];
-    
-    [self swizzleMethod:@selector(SKaddObject:) targetClass:@"__NSArrayM" target:@selector(addObject:)];
-    [self swizzleMethod:@selector(SKinsertObject:atIndex:) targetClass:@"__NSArrayM" target:@selector(insertObject:atIndex:)];
-    [self swizzleMethod:@selector(SKremoveObjectAtIndex:) targetClass:@"__NSArrayM" target:@selector(removeObjectAtIndex:)];
-    [self swizzleMethod:@selector(SKreplaceObjectAtIndex:withObject:) targetClass:@"__NSArrayM" target:@selector(replaceObjectAtIndex:withObject:)];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self swizzleMethod:@selector(SKobjectAtIndex:) targetClass:@"__NSArrayM" target:@selector(objectAtIndex:)];
+        [self swizzleMethod:@selector(SKarrayByAddingObject:) targetClass:@"__NSArrayM" target:@selector(arrayByAddingObject:)];
+        
+        [self swizzleMethod:@selector(SKaddObject:) targetClass:@"__NSArrayM" target:@selector(addObject:)];
+        [self swizzleMethod:@selector(SKinsertObject:atIndex:) targetClass:@"__NSArrayM" target:@selector(insertObject:atIndex:)];
+        [self swizzleMethod:@selector(SKremoveObjectAtIndex:) targetClass:@"__NSArrayM" target:@selector(removeObjectAtIndex:)];
+        [self swizzleMethod:@selector(SKreplaceObjectAtIndex:withObject:) targetClass:@"__NSArrayM" target:@selector(replaceObjectAtIndex:withObject:)];
+    });
 }
 @end

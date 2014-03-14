@@ -78,8 +78,11 @@
 #pragma clang diagnostic pop
 
 + (void) load{
-    [self swizzleMethod:@selector(SKperformSelector:) target:@selector(performSelector:)];
-    [self swizzleMethod:@selector(SKperformSelector:withObject:) target:@selector(performSelector:withObject:)];
-    [self swizzleMethod:@selector(SKperformSelector:withObject:withObject:) target:@selector(performSelector:withObject:withObject:)];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self swizzleMethod:@selector(SKperformSelector:) target:@selector(performSelector:)];
+        [self swizzleMethod:@selector(SKperformSelector:withObject:) target:@selector(performSelector:withObject:)];
+        [self swizzleMethod:@selector(SKperformSelector:withObject:withObject:) target:@selector(performSelector:withObject:withObject:)];
+    });
 }
 @end

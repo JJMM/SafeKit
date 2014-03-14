@@ -32,8 +32,10 @@
 
 
 + (void) load{
-    [self swizzleMethod:@selector(SKremoveObjectForKey:) targetClass:@"__NSDictionaryM" target:@selector(removeObjectForKey:)];
-    [self swizzleMethod:@selector(SKsetObject:forKey:) targetClass:@"__NSDictionaryM" target:@selector(setObject:forKey:)];
-
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self swizzleMethod:@selector(SKremoveObjectForKey:) targetClass:@"__NSDictionaryM" target:@selector(removeObjectForKey:)];
+        [self swizzleMethod:@selector(SKsetObject:forKey:) targetClass:@"__NSDictionaryM" target:@selector(setObject:forKey:)];
+    });
 }
 @end
