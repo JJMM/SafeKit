@@ -9,6 +9,7 @@
 #import "NSMutableArray+SafeKit.h"
 #import "NSObject+swizzle.h"
 #import "SafeKitLog.h"
+#import "NSException+SafeKit.h"
 @implementation NSMutableArray(SafeKit)
 -(id)SKobjectAtIndex:(NSUInteger)index{
     if (index >= [self count]) {
@@ -19,6 +20,7 @@
 }
 - (NSArray *)SKarrayByAddingObject:(id)anObject{
     if (anObject) {
+        [[SafeKitLog shareInstance]log:@"object is nil"];
         return nil;
     }
     return [self SKarrayByAddingObject:anObject];
@@ -26,6 +28,7 @@
 
 -(void)SKaddObject:(id)anObject{
     if (!anObject) {
+        [[SafeKitLog shareInstance]log:@"object is nil"];
         return;
     }
     [self SKaddObject:anObject];
@@ -64,13 +67,13 @@
 + (void) load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [self swizzleMethod:@selector(SKobjectAtIndex:) targetClass:@"__NSArrayM" target:@selector(objectAtIndex:)];
-        [self swizzleMethod:@selector(SKarrayByAddingObject:) targetClass:@"__NSArrayM" target:@selector(arrayByAddingObject:)];
+        [self swizzleMethod:@selector(SKobjectAtIndex:) tarClass:@"__NSArrayM" tarSel:@selector(objectAtIndex:)];
+        [self swizzleMethod:@selector(SKarrayByAddingObject:) tarClass:@"__NSArrayM" tarSel:@selector(arrayByAddingObject:)];
         
-        [self swizzleMethod:@selector(SKaddObject:) targetClass:@"__NSArrayM" target:@selector(addObject:)];
-        [self swizzleMethod:@selector(SKinsertObject:atIndex:) targetClass:@"__NSArrayM" target:@selector(insertObject:atIndex:)];
-        [self swizzleMethod:@selector(SKremoveObjectAtIndex:) targetClass:@"__NSArrayM" target:@selector(removeObjectAtIndex:)];
-        [self swizzleMethod:@selector(SKreplaceObjectAtIndex:withObject:) targetClass:@"__NSArrayM" target:@selector(replaceObjectAtIndex:withObject:)];
+        [self swizzleMethod:@selector(SKaddObject:) tarClass:@"__NSArrayM" tarSel:@selector(addObject:)];
+        [self swizzleMethod:@selector(SKinsertObject:atIndex:) tarClass:@"__NSArrayM" tarSel:@selector(insertObject:atIndex:)];
+        [self swizzleMethod:@selector(SKremoveObjectAtIndex:) tarClass:@"__NSArrayM" tarSel:@selector(removeObjectAtIndex:)];
+        [self swizzleMethod:@selector(SKreplaceObjectAtIndex:withObject:) tarClass:@"__NSArrayM" tarSel:@selector(replaceObjectAtIndex:withObject:)];
     });
 }
 @end

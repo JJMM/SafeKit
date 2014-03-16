@@ -21,13 +21,11 @@
 		2A12B30318D17ECE0084B5F9 /* DurexKitExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B30218D17ECE0084B5F9 /* DurexKitExampleTests.m */; };
 		2A12B32318D17F250084B5F9 /* NSArray+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B31D18D17F250084B5F9 /* NSArray+SafeKit.m */; };
 		2A12B32418D17F250084B5F9 /* NSObject+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B31F18D17F250084B5F9 /* NSObject+SafeKit.m */; };
-		2A12B32518D17F250084B5F9 /* NSObject+swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B32118D17F250084B5F9 /* NSObject+swizzle.m */; };
 		2A12B32C18D17F990084B5F9 /* CUSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B32918D17F990084B5F9 /* CUSMainViewController.m */; };
 		2A12B32D18D17F990084B5F9 /* CUSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B32B18D17F990084B5F9 /* CUSViewController.m */; };
 		2A12B33118D184BD0084B5F9 /* NSMutableArray+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33018D184BD0084B5F9 /* NSMutableArray+SafeKit.m */; };
 		2A12B33418D1896F0084B5F9 /* NSDictionary+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33318D1896F0084B5F9 /* NSDictionary+SafeKit.m */; };
 		2A12B33718D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33618D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m */; };
-		2A12B33B18D19CF50084B5F9 /* NSException+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33A18D19CF50084B5F9 /* NSException+SafeKit.m */; };
 		2A12B33F18D19E960084B5F9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A12B33D18D19E960084B5F9 /* Icon.png */; };
 		2A12B34018D19E960084B5F9 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A12B33E18D19E960084B5F9 /* Icon@2x.png */; };
 		2A12B34A18D1A0BC0084B5F9 /* CYRLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34318D1A0BC0084B5F9 /* CYRLayoutManager.m */; };
@@ -35,7 +33,11 @@
 		2A12B34C18D1A0BC0084B5F9 /* CYRTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34718D1A0BC0084B5F9 /* CYRTextView.m */; };
 		2A12B34D18D1A0BC0084B5F9 /* CYRToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34918D1A0BC0084B5F9 /* CYRToken.m */; };
 		2A12B35018D1A0C30084B5F9 /* QEDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34F18D1A0C30084B5F9 /* QEDTextView.m */; };
-		2A983BAD18D2A65D00FF84F4 /* SafeKitLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A983BAC18D2A65D00FF84F4 /* SafeKitLog.m */; };
+		2A1D353618D3FD0D0096274C /* NSException+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353118D3FD0D0096274C /* NSException+SafeKit.m */; };
+		2A1D353718D3FD0D0096274C /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353318D3FD0D0096274C /* NSObject+Swizzle.m */; };
+		2A1D353818D3FD0D0096274C /* SafeKitLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353518D3FD0D0096274C /* SafeKitLog.m */; };
+		2A1D353C18D401F00096274C /* NSString+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353B18D401F00096274C /* NSString+SafeKit.m */; };
+		2A1D353F18D402C50096274C /* NSMutableString+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353E18D402C50096274C /* NSMutableString+SafeKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +72,6 @@
 		2A12B31D18D17F250084B5F9 /* NSArray+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeKit.m"; sourceTree = "<group>"; };
 		2A12B31E18D17F250084B5F9 /* NSObject+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SafeKit.h"; sourceTree = "<group>"; };
 		2A12B31F18D17F250084B5F9 /* NSObject+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SafeKit.m"; sourceTree = "<group>"; };
-		2A12B32018D17F250084B5F9 /* NSObject+swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+swizzle.h"; sourceTree = "<group>"; };
-		2A12B32118D17F250084B5F9 /* NSObject+swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+swizzle.m"; sourceTree = "<group>"; };
 		2A12B32618D17F6F0084B5F9 /* DurexKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DurexKit.h; sourceTree = "<group>"; };
 		2A12B32818D17F990084B5F9 /* CUSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSMainViewController.h; sourceTree = "<group>"; };
 		2A12B32918D17F990084B5F9 /* CUSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSMainViewController.m; sourceTree = "<group>"; };
@@ -83,8 +83,6 @@
 		2A12B33318D1896F0084B5F9 /* NSDictionary+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeKit.m"; sourceTree = "<group>"; };
 		2A12B33518D189DA0084B5F9 /* NSMutableDictionary+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+SafeKit.h"; sourceTree = "<group>"; };
 		2A12B33618D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+SafeKit.m"; sourceTree = "<group>"; };
-		2A12B33918D19CF50084B5F9 /* NSException+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSException+SafeKit.h"; sourceTree = "<group>"; };
-		2A12B33A18D19CF50084B5F9 /* NSException+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSException+SafeKit.m"; sourceTree = "<group>"; };
 		2A12B33D18D19E960084B5F9 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		2A12B33E18D19E960084B5F9 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		2A12B34218D1A0BC0084B5F9 /* CYRLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRLayoutManager.h; sourceTree = "<group>"; };
@@ -97,8 +95,17 @@
 		2A12B34918D1A0BC0084B5F9 /* CYRToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRToken.m; sourceTree = "<group>"; };
 		2A12B34E18D1A0C30084B5F9 /* QEDTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QEDTextView.h; sourceTree = "<group>"; };
 		2A12B34F18D1A0C30084B5F9 /* QEDTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QEDTextView.m; sourceTree = "<group>"; };
-		2A983BAB18D2A65D00FF84F4 /* SafeKitLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeKitLog.h; sourceTree = "<group>"; };
-		2A983BAC18D2A65D00FF84F4 /* SafeKitLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafeKitLog.m; sourceTree = "<group>"; };
+		2A1D353018D3FD0D0096274C /* NSException+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSException+SafeKit.h"; sourceTree = "<group>"; };
+		2A1D353118D3FD0D0096274C /* NSException+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSException+SafeKit.m"; sourceTree = "<group>"; };
+		2A1D353218D3FD0D0096274C /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
+		2A1D353318D3FD0D0096274C /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
+		2A1D353418D3FD0D0096274C /* SafeKitLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeKitLog.h; sourceTree = "<group>"; };
+		2A1D353518D3FD0D0096274C /* SafeKitLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafeKitLog.m; sourceTree = "<group>"; };
+		2A1D353918D3FD300096274C /* SafeKitCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeKitCore.h; sourceTree = "<group>"; };
+		2A1D353A18D401F00096274C /* NSString+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SafeKit.h"; sourceTree = "<group>"; };
+		2A1D353B18D401F00096274C /* NSString+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SafeKit.m"; sourceTree = "<group>"; };
+		2A1D353D18D402C50096274C /* NSMutableString+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+SafeKit.h"; sourceTree = "<group>"; };
+		2A1D353E18D402C50096274C /* NSMutableString+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+SafeKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,8 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				2A12B32618D17F6F0084B5F9 /* DurexKit.h */,
-				2A983BAA18D2A65700FF84F4 /* Log */,
-				2A12B33818D19CE00084B5F9 /* Exception */,
+				2A1D352F18D3FD0D0096274C /* SafeCore */,
 				2A12B31A18D17F250084B5F9 /* Foundation */,
 			);
 			path = DurexKit;
@@ -214,8 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				2A12B31B18D17F250084B5F9 /* Foundation+SafeKit.h */,
-				2A12B32018D17F250084B5F9 /* NSObject+swizzle.h */,
-				2A12B32118D17F250084B5F9 /* NSObject+swizzle.m */,
 				2A12B31E18D17F250084B5F9 /* NSObject+SafeKit.h */,
 				2A12B31F18D17F250084B5F9 /* NSObject+SafeKit.m */,
 				2A12B31C18D17F250084B5F9 /* NSArray+SafeKit.h */,
@@ -226,6 +230,10 @@
 				2A12B33318D1896F0084B5F9 /* NSDictionary+SafeKit.m */,
 				2A12B33518D189DA0084B5F9 /* NSMutableDictionary+SafeKit.h */,
 				2A12B33618D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m */,
+				2A1D353A18D401F00096274C /* NSString+SafeKit.h */,
+				2A1D353B18D401F00096274C /* NSString+SafeKit.m */,
+				2A1D353D18D402C50096274C /* NSMutableString+SafeKit.h */,
+				2A1D353E18D402C50096274C /* NSMutableString+SafeKit.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -239,15 +247,6 @@
 				2A12B32B18D17F990084B5F9 /* CUSViewController.m */,
 			);
 			path = ExampleVC;
-			sourceTree = "<group>";
-		};
-		2A12B33818D19CE00084B5F9 /* Exception */ = {
-			isa = PBXGroup;
-			children = (
-				2A12B33918D19CF50084B5F9 /* NSException+SafeKit.h */,
-				2A12B33A18D19CF50084B5F9 /* NSException+SafeKit.m */,
-			);
-			path = Exception;
 			sourceTree = "<group>";
 		};
 		2A12B33C18D19E6A0084B5F9 /* Resource */ = {
@@ -276,13 +275,18 @@
 			path = CYRTextView;
 			sourceTree = "<group>";
 		};
-		2A983BAA18D2A65700FF84F4 /* Log */ = {
+		2A1D352F18D3FD0D0096274C /* SafeCore */ = {
 			isa = PBXGroup;
 			children = (
-				2A983BAB18D2A65D00FF84F4 /* SafeKitLog.h */,
-				2A983BAC18D2A65D00FF84F4 /* SafeKitLog.m */,
+				2A1D353918D3FD300096274C /* SafeKitCore.h */,
+				2A1D353018D3FD0D0096274C /* NSException+SafeKit.h */,
+				2A1D353118D3FD0D0096274C /* NSException+SafeKit.m */,
+				2A1D353218D3FD0D0096274C /* NSObject+Swizzle.h */,
+				2A1D353318D3FD0D0096274C /* NSObject+Swizzle.m */,
+				2A1D353418D3FD0D0096274C /* SafeKitLog.h */,
+				2A1D353518D3FD0D0096274C /* SafeKitLog.m */,
 			);
-			path = Log;
+			path = SafeCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,19 +390,21 @@
 				2A12B34D18D1A0BC0084B5F9 /* CYRToken.m in Sources */,
 				2A12B34A18D1A0BC0084B5F9 /* CYRLayoutManager.m in Sources */,
 				2A12B35018D1A0C30084B5F9 /* QEDTextView.m in Sources */,
+				2A1D353C18D401F00096274C /* NSString+SafeKit.m in Sources */,
+				2A1D353618D3FD0D0096274C /* NSException+SafeKit.m in Sources */,
 				2A12B2EA18D17ECE0084B5F9 /* main.m in Sources */,
-				2A12B33B18D19CF50084B5F9 /* NSException+SafeKit.m in Sources */,
 				2A12B32C18D17F990084B5F9 /* CUSMainViewController.m in Sources */,
+				2A1D353F18D402C50096274C /* NSMutableString+SafeKit.m in Sources */,
 				2A12B2EE18D17ECE0084B5F9 /* DKAppDelegate.m in Sources */,
 				2A12B32318D17F250084B5F9 /* NSArray+SafeKit.m in Sources */,
+				2A1D353718D3FD0D0096274C /* NSObject+Swizzle.m in Sources */,
 				2A12B32D18D17F990084B5F9 /* CUSViewController.m in Sources */,
 				2A12B33718D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m in Sources */,
 				2A12B32418D17F250084B5F9 /* NSObject+SafeKit.m in Sources */,
 				2A12B34B18D1A0BC0084B5F9 /* CYRTextStorage.m in Sources */,
+				2A1D353818D3FD0D0096274C /* SafeKitLog.m in Sources */,
 				2A12B34C18D1A0BC0084B5F9 /* CYRTextView.m in Sources */,
-				2A983BAD18D2A65D00FF84F4 /* SafeKitLog.m in Sources */,
 				2A12B33418D1896F0084B5F9 /* NSDictionary+SafeKit.m in Sources */,
-				2A12B32518D17F250084B5F9 /* NSObject+swizzle.m in Sources */,
 				2A12B33118D184BD0084B5F9 /* NSMutableArray+SafeKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

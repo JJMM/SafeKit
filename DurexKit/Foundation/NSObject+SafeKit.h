@@ -7,9 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+typedef enum{
+    SafeKitObjectPerformExceptionCatchOn,
+    SafeKitObjectPerformExceptionCatchOff
+} SafeKitObjectPerformExceptionCatch;
 
-@interface NSObject(SafeKit)
-- (id)performSelectorSafe:(SEL)aSelector;
-- (id)performSelectorSafe:(SEL)aSelector withObject:(id)object;
-- (id)performSelectorSafe:(SEL)aSelector withObject:(id)object1 withObject:(id)object2;
+void setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatch type);
+SafeKitObjectPerformExceptionCatch getSafeKitObjectPerformExceptionCatch();
+
+@interface NSObject(SafeKit_Perform)
+@end
+
+@interface NSObject(SafeKit_KVO)
 @end

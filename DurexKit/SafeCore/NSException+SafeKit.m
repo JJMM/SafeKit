@@ -11,17 +11,27 @@
 
 @implementation NSException(SafeKit)
 -(void)printStackTrace{
-    NSString *exceptionStr = [NSException formatExceptionToString:self];
+    NSString *exceptionStr = [NSException formatExceptionToString:self withReason:nil];
     [[SafeKitLog shareInstance]logExc:@"%@",exceptionStr];
 }
 
-+(NSString *)formatExceptionToString:(NSException *)exception {
+-(void)printStackTrace:(NSString *)reasonStr{
+    NSString *exceptionStr = [NSException formatExceptionToString:self withReason:reasonStr];
+    [[SafeKitLog shareInstance]logExc:@"%@",exceptionStr];
+}
+
++(NSString *)formatExceptionToString:(NSException *)exception withReason:(NSString *)reasonStr{
     NSArray *arr = [exception callStackSymbols];
-    NSString *reason = [exception reason];
+    NSString *reasonText = nil;
+    if (reasonStr) {
+        reasonText = reasonStr;
+    }else{
+        reasonText = [exception reason];
+    }
     NSString *name = [exception name];
     
     NSString *header = @"\n=============Crash exception report=============\n";
-    NSString *description = [NSString stringWithFormat:@"%@name:%@\ntime:%@\nreason:\n%@",header,name,[NSDate date],reason];
+    NSString *description = [NSString stringWithFormat:@"%@name:%@\ntime:%@\nreason:%@",header,name,[NSDate date],reasonText];
     
     NSString *exceptionStr = [NSString stringWithFormat:@"%@\ncallStackSymbols:\n%@",description,[arr componentsJoinedByString:@"\n"]];
     

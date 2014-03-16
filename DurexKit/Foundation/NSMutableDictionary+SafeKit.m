@@ -34,8 +34,8 @@
 + (void) load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [self swizzleMethod:@selector(SKremoveObjectForKey:) targetClass:@"__NSDictionaryM" target:@selector(removeObjectForKey:)];
-        [self swizzleMethod:@selector(SKsetObject:forKey:) targetClass:@"__NSDictionaryM" target:@selector(setObject:forKey:)];
+        [self swizzleMethod:@selector(SKremoveObjectForKey:) tarClass:@"__NSDictionaryM" tarSel:@selector(removeObjectForKey:)];
+        [self swizzleMethod:@selector(SKsetObject:forKey:) tarClass:@"__NSDictionaryM" tarSel:@selector(setObject:forKey:)];
     });
 }
 @end

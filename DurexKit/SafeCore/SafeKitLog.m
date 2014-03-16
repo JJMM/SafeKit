@@ -9,9 +9,8 @@
 #import "SafeKitLog.h"
 #import "NSException+SafeKit.h"
 
-static SafeKitLogType SafeKitLogTypeValue = SafeKitLogTypeInfo;
-SafeKitLog *SafeKitLogInstance;
 
+SafeKitLog *SafeKitLogInstance;
 
 @interface SafeKitConsolePrinter : SafeKitPrinter
 
@@ -43,19 +42,20 @@ SafeKitLog *SafeKitLogInstance;
     return SafeKitLogInstance;
 }
 -(void)log:(NSString *)format, ...{
-    if ([SafeKitLog getLogType] == SafeKitLogTypeNone) {
+    if (getSafeKitLogType() == SafeKitLogTypeNone) {
         return;
     }
     if (format) {
         va_list arguments;
         va_start(arguments, format);
         va_end(arguments);
-        [self.printer printv:format withArgs:arguments];
+        
+        [self.printer printv:[NSString stringWithFormat:@"SafeKit:%@",format] withArgs:arguments];
     }
     
-    if ([SafeKitLog getLogType] == SafeKitLogTypeDebugger) {
+    if (getSafeKitLogType() == SafeKitLogTypeDebugger) {
         @try {
-            NSException *e = [NSException exceptionWithName:@"SafeKitException" reason:@"info" userInfo:nil];
+            NSException *e = [NSException exceptionWithName:@"SafeKit" reason:@"StackTrace" userInfo:nil];
             @throw e;
         }
         @catch (NSException *exception) {
@@ -67,7 +67,7 @@ SafeKitLog *SafeKitLogInstance;
     }
 }
 -(void)logExc:(NSString *)format, ...{
-    if ([SafeKitLog getLogType] == SafeKitLogTypeNone) {
+    if (getSafeKitLogType() == SafeKitLogTypeNone) {
         return;
     }
     if (format) {
@@ -76,12 +76,6 @@ SafeKitLog *SafeKitLogInstance;
         va_end(arguments);
         [self.printer printv:format withArgs:arguments];
     }
-}
-+(SafeKitLogType)getLogType{
-    return SafeKitLogTypeValue;
-}
-+(void)setLogType:(SafeKitLogType)logType{
-    SafeKitLogTypeValue = logType;
 }
 
 @end
@@ -99,3 +93,10 @@ SafeKitLog *SafeKitLogInstance;
 }
 @end
 
+static SafeKitLogType SafeKitLogTypeValue = SafeKitLogTypeInfo;
+void setSafeKitLogType(SafeKitLogType logType){
+    SafeKitLogTypeValue = logType;
+}
+SafeKitLogType getSafeKitLogType(){
+    return SafeKitLogTypeValue;
+}

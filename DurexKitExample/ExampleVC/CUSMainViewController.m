@@ -30,9 +30,9 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-//    [SafeKitLog setLogType:SafeKitLogTypeNone];
-//    [SafeKitLog setLogType:SafeKitLogTypeInfo];
-//    [SafeKitLog setLogType:SafeKitLogTypeDebugger];
+//    setSafeKitLogType(SafeKitLogTypeNone);
+//    setSafeKitLogType(SafeKitLogTypeInfo);
+    setSafeKitLogType(SafeKitLogTypeDebugger);
     
     QEDTextView *textView = [[QEDTextView alloc] initWithFrame:self.view.bounds];
     textView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
@@ -66,7 +66,25 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     button.frame = CGRectMake(50, self.view.frame.size.height - 130, 210, 30);
     [button setTitle:@"no selector button" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(noonnonoSelector:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(noneSelector:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    
+    NSMutableString *str = [[NSMutableString alloc]initWithString:@"abc"];
+    [str appendString:nil];
+
+    UIViewController *kvo = [[UIViewController alloc]init];
+    [kvo setValue:nil forKey:@"titleasfs"];
+    [kvo valueForKey:@"titleasfs"];
+    [kvo valueForUndefinedKey:@"asdfasdfadssdafasdf"];
+
 }
+
+
+-(void)buttonClicked:(id)sender{
+    setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOn);//no crash
+//    setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOff);//crash
+    NSException *e = [NSException exceptionWithName:@"TestException" reason:@"Test" userInfo:nil];
+    @throw e;
+}
+
 @end

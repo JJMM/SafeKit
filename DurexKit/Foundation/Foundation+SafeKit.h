@@ -6,8 +6,6 @@
 //  Copyright (c) 2014年 zhangyu. All rights reserved.
 //
 
-#import "NSObject+swizzle.h"
-
 #import "NSObject+SafeKit.h"
 
 #import "NSArray+SafeKit.h"
@@ -16,3 +14,5 @@
 #import "NSDictionary+SafeKit.h"
 #import "NSMutableDictionary+SafeKit.h"
 
+#import "NSString+SafeKit.h"
+#import "NSMutableString+SafeKit.h"

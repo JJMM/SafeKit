@@ -8,6 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+#define SK_TRY_BODY(__target) \
+@try {\
+{__target}\
+}\
+@catch (NSException *exception) {\
+[exception printStackTrace];\
+}\
+@finally {\
+\
+}
+
 @interface NSException(SafeKit)
 -(void)printStackTrace;
+-(void)printStackTrace:(NSString *)reasonStr;
 @end

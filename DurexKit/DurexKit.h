@@ -6,6 +6,5 @@
 //  Copyright (c) 2014年 zhangyu. All rights reserved.
 //
 
+#import "SafeKitCore.h"
 #import "Foundation+SafeKit.h"
-#import "SafeKitLog.h"
-#import "NSException+SafeKit.h"
