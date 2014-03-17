@@ -9,6 +9,7 @@
 #import "NSMutableString+SafeKit.h"
 #import "NSObject+swizzle.h"
 #import "SafeKitLog.h"
+#import "NSException+SafeKit.h"
 
 @implementation NSMutableString(SafeKit)
 
@@ -16,11 +17,7 @@
 //- (void)appendFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 
 - (void)SKappendString:(NSString *)aString{
-    if (!aString) {
-        [[SafeKitLog shareInstance]log:@"string is nil"];
-        return;
-    }
-    [self SKappendString:aString];
+    SK_TRY_BODY([self SKappendString:aString];)
 }
 //- (void)SKappendFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2){
 //    if (!format) {
@@ -30,24 +27,11 @@
 //    [self appendFormat:format,arguments];
 //}
 - (void)SKsetString:(NSString *)aString{
-    if (!aString) {
-        [[SafeKitLog shareInstance]log:@"string is nil"];
-        return;
-    }
-    [self SKsetString:aString];
+    SK_TRY_BODY([self SKsetString:aString];)
 }
 
 - (void)SKinsertString:(NSString *)aString atIndex:(NSUInteger)index{
-    if (index > [self length]) {
-        [[SafeKitLog shareInstance]log:@"index[%ld] > length[%ld]",(long)index ,(long)[self length]];
-        return;
-    }
-    
-    if (!aString) {
-        [[SafeKitLog shareInstance]log:@"string is nil"];
-        return;
-    }
-    [self SKinsertString:aString atIndex:index];
+    SK_TRY_BODY([self SKinsertString:aString atIndex:index];)
 }
 
 + (void) load{

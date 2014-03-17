@@ -9,25 +9,14 @@
 #import "NSMutableDictionary+SafeKit.h"
 #import "NSObject+swizzle.h"
 #import "SafeKitLog.h"
+#import "NSException+SafeKit.h"
 @implementation NSMutableDictionary(SafeKit)
 
 - (void)SKremoveObjectForKey:(id)aKey{
-    if (!aKey) {
-        [[SafeKitLog shareInstance]log:@"key is nil"];
-        return;
-    }
-    [self SKremoveObjectForKey:aKey];
+    SK_TRY_BODY([self SKremoveObjectForKey:aKey];)
 }
 - (void)SKsetObject:(id)anObject forKey:(id <NSCopying>)aKey{
-    if (!anObject) {
-        [[SafeKitLog shareInstance]log:@"object is nil"];
-        return;
-    }
-    if (!aKey) {
-        [[SafeKitLog shareInstance]log:@"key is nil"];
-        return;
-    }
-    [self SKsetObject:anObject forKey:aKey];
+    SK_TRY_BODY([self SKsetObject:anObject forKey:aKey];)
 }
 
 

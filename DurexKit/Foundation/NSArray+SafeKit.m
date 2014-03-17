@@ -9,19 +9,15 @@
 #import "NSArray+SafeKit.h"
 #import "NSObject+swizzle.h"
 #import "SafeKitLog.h"
+#import "NSException+SafeKit.h"
+
 @implementation NSArray(SafeKit)
 -(id)SKobjectAtIndex:(NSUInteger)index{
-    if (index >= [self count]) {
-        [[SafeKitLog shareInstance]log:@"index[%ld] >= count[%ld]",(long)index ,(long)[self count]];
-        return nil;
-    }
-    return [self SKobjectAtIndex:index];
+    SK_TRY_BODY(return [self SKobjectAtIndex:index];)
+    return nil;
 }
 - (NSArray *)SKarrayByAddingObject:(id)anObject{
-    if (anObject) {
-        [[SafeKitLog shareInstance]log:@"object is nil"];
-        return [self SKarrayByAddingObject:anObject];
-    }
+    SK_TRY_BODY(return [self SKarrayByAddingObject:anObject];)
     return nil;
 }
 + (void) load{

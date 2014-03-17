@@ -9,6 +9,7 @@
 #import "NSString+SafeKit.h"
 #import "NSObject+swizzle.h"
 #import "SafeKitLog.h"
+#import "NSException+SafeKit.h"
 
 @implementation NSString(SafeKit)
 
