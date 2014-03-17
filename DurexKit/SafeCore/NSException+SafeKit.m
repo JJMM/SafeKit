@@ -30,7 +30,7 @@
     }
     NSString *name = [exception name];
     
-    NSString *header = @"\n=============Crash exception report=============\n";
+    NSString *header = @"\n=============SafeKit Exception Report=============\n";
     NSString *description = [NSString stringWithFormat:@"%@name:%@\ntime:%@\nreason:%@",header,name,[NSDate date],reasonText];
     
     NSString *exceptionStr = [NSString stringWithFormat:@"%@\ncallStackSymbols:\n%@",description,[arr componentsJoinedByString:@"\n"]];

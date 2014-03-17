@@ -93,7 +93,7 @@ SafeKitLog *SafeKitLogInstance;
 }
 @end
 
-static SafeKitLogType SafeKitLogTypeValue = SafeKitLogTypeInfo;
+static SafeKitLogType SafeKitLogTypeValue = SafeKitLogTypeDebugger;
 void setSafeKitLogType(SafeKitLogType logType){
     SafeKitLogTypeValue = logType;
 }
