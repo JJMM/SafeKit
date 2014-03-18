@@ -12,19 +12,37 @@
 #import "NSException+SafeKit.h"
 @implementation NSMutableArray(SafeKit)
 -(id)SKobjectAtIndex:(NSUInteger)index{
-    SK_TRY_BODY(return [self SKobjectAtIndex:index];)
-    return nil;
+    if (index >= [self count]) {
+        [[SafeKitLog shareInstance]log:@"index[%ld] >= count[%ld]",(long)index ,(long)[self count]];
+        return nil;
+    }
+    return [self SKobjectAtIndex:index];
 }
 - (NSArray *)SKarrayByAddingObject:(id)anObject{
-    SK_TRY_BODY(return [self SKarrayByAddingObject:anObject];)
-    return nil;
+    if (anObject) {
+        [[SafeKitLog shareInstance]log:@"object is nil"];
+        return nil;
+    }
+    return [self SKarrayByAddingObject:anObject];
 }
 
 -(void)SKaddObject:(id)anObject{
-    SK_TRY_BODY([self SKaddObject:anObject];)
+    if (!anObject) {
+        [[SafeKitLog shareInstance]log:@"object is nil"];
+        return;
+    }
+    [self SKaddObject:anObject];
 }
 - (void)SKinsertObject:(id)anObject atIndex:(NSUInteger)index{
-    SK_TRY_BODY([self SKinsertObject:anObject atIndex:index];)
+    if (index > [self count]) {
+        [[SafeKitLog shareInstance]log:@"index[%ld] > count[%ld]",(long)index ,(long)[self count]];
+        return;
+    }
+    if (!anObject) {
+        [[SafeKitLog shareInstance]log:@"object is nil"];
+        return;
+    }
+    [self SKinsertObject:anObject atIndex:index];
 }
 
 - (void)SKremoveObjectAtIndex:(NSUInteger)index{
@@ -33,10 +51,18 @@
         return;
     }
     
-    SK_TRY_BODY([self SKremoveObjectAtIndex:index];)
+    return [self SKremoveObjectAtIndex:index];
 }
 - (void)SKreplaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject{
-    SK_TRY_BODY([self SKreplaceObjectAtIndex:index withObject:anObject];)
+    if (index >= [self count]) {
+        [[SafeKitLog shareInstance]log:@"index[%ld] >= count[%ld]",(long)index ,(long)[self count]];
+        return;
+    }
+    if (!anObject) {
+        [[SafeKitLog shareInstance]log:@"object is nil"];
+        return;
+    }
+    [self SKreplaceObjectAtIndex:index withObject:anObject];
 }
 
 + (void) load{
