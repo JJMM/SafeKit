@@ -27,11 +27,24 @@
 //    [self appendFormat:format,arguments];
 //}
 - (void)SKsetString:(NSString *)aString{
-    SK_TRY_BODY([self SKsetString:aString];)
+    if (!aString) {
+        [[SafeKitLog shareInstance]log:@"aString is nil"];
+        return;
+    }
+    [self SKsetString:aString];
 }
 
 - (void)SKinsertString:(NSString *)aString atIndex:(NSUInteger)index{
-    SK_TRY_BODY([self SKinsertString:aString atIndex:index];)
+    if (index > [self length]) {
+        [[SafeKitLog shareInstance]log:@"index[%ld] > length[%ld]",(long)index ,(long)[self length]];
+        return;
+    }
+    if (!aString) {
+        [[SafeKitLog shareInstance]log:@"aString is nil"];
+        return;
+    }
+    
+    [self SKinsertString:aString atIndex:index];
 }
 
 + (void) load{
