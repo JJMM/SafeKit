@@ -32,6 +32,6 @@ typedef enum{
     SafeKitPowerOff
 } SafeKitPower;
 
-// enable swizzle method
+// enable swizzle method 
 void setSafeKitPower(SafeKitPower power);
 SafeKitPower getSafeKitPower();

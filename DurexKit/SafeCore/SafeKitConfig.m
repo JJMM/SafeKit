@@ -7,10 +7,12 @@
 //
 
 #import "SafeKitConfig.h"
+
 static NSInteger SafeKitLogTypeValue = SafeKitLogTypeError;
 static SafeKitObjectPerformExceptionCatch safeKitObjectPerformExceptionCatchValue =  SafeKitObjectPerformExceptionCatchOn;
-
 static SafeKitPower SafeKitPowerValue = SafeKitPowerOn;
+
+
 ////////   Log   ////////
 void setSafeKitLogType(NSInteger logType){
     SafeKitLogTypeValue = logType;
@@ -28,7 +30,7 @@ SafeKitObjectPerformExceptionCatch getSafeKitObjectPerformExceptionCatch(){
     return safeKitObjectPerformExceptionCatchValue;
 }
 
-
+////////   power   ////////
 void setSafeKitPower(SafeKitPower power){
     SafeKitPowerValue = power;
 }
