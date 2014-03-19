@@ -9,6 +9,7 @@
 #import "NSObject+Swizzle.h"
 #import <objc/runtime.h>
 #import "NSException+SafeKit.h"
+#import "SafeKitConfig.h"
 
 @implementation NSObject(Swizzle)
 
@@ -36,6 +37,9 @@
         return;
     }
     if (!tarSel) {
+        return;
+    }
+    if (getSafeKitPower() == SafeKitPowerOff) {
         return;
     }
     SK_TRY_BODY(

@@ -7,7 +7,7 @@
 //
 
 #import "DKAppDelegate.h"
-#import "CUSMainViewController.h"
+#import "SKMainViewController.h"
 
 @implementation DKAppDelegate
 
@@ -18,7 +18,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    CUSMainViewController *mainController = [[CUSMainViewController alloc]init];
+    SKMainViewController *mainController = [[SKMainViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:mainController];
     self.window.rootViewController = nav;
     return YES;

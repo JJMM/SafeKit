@@ -21,8 +21,6 @@
 		2A12B30318D17ECE0084B5F9 /* DurexKitExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B30218D17ECE0084B5F9 /* DurexKitExampleTests.m */; };
 		2A12B32318D17F250084B5F9 /* NSArray+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B31D18D17F250084B5F9 /* NSArray+SafeKit.m */; };
 		2A12B32418D17F250084B5F9 /* NSObject+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B31F18D17F250084B5F9 /* NSObject+SafeKit.m */; };
-		2A12B32C18D17F990084B5F9 /* CUSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B32918D17F990084B5F9 /* CUSMainViewController.m */; };
-		2A12B32D18D17F990084B5F9 /* CUSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B32B18D17F990084B5F9 /* CUSViewController.m */; };
 		2A12B33118D184BD0084B5F9 /* NSMutableArray+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33018D184BD0084B5F9 /* NSMutableArray+SafeKit.m */; };
 		2A12B33418D1896F0084B5F9 /* NSDictionary+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33318D1896F0084B5F9 /* NSDictionary+SafeKit.m */; };
 		2A12B33718D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33618D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m */; };
@@ -38,6 +36,9 @@
 		2A1D353818D3FD0D0096274C /* SafeKitLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353518D3FD0D0096274C /* SafeKitLog.m */; };
 		2A1D353C18D401F00096274C /* NSString+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353B18D401F00096274C /* NSString+SafeKit.m */; };
 		2A1D353F18D402C50096274C /* NSMutableString+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353E18D402C50096274C /* NSMutableString+SafeKit.m */; };
+		2A3369A118D9F4760012E4F3 /* SafeKitConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3369A018D9F4760012E4F3 /* SafeKitConfig.m */; };
+		2A3369A418D9F7190012E4F3 /* SKMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3369A318D9F7190012E4F3 /* SKMainViewController.m */; };
+		2A3369A718D9F7330012E4F3 /* SKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3369A618D9F7330012E4F3 /* SKViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,10 +74,6 @@
 		2A12B31E18D17F250084B5F9 /* NSObject+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SafeKit.h"; sourceTree = "<group>"; };
 		2A12B31F18D17F250084B5F9 /* NSObject+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SafeKit.m"; sourceTree = "<group>"; };
 		2A12B32618D17F6F0084B5F9 /* DurexKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DurexKit.h; sourceTree = "<group>"; };
-		2A12B32818D17F990084B5F9 /* CUSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSMainViewController.h; sourceTree = "<group>"; };
-		2A12B32918D17F990084B5F9 /* CUSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSMainViewController.m; sourceTree = "<group>"; };
-		2A12B32A18D17F990084B5F9 /* CUSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUSViewController.h; sourceTree = "<group>"; };
-		2A12B32B18D17F990084B5F9 /* CUSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUSViewController.m; sourceTree = "<group>"; };
 		2A12B32F18D184BD0084B5F9 /* NSMutableArray+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeKit.h"; sourceTree = "<group>"; };
 		2A12B33018D184BD0084B5F9 /* NSMutableArray+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafeKit.m"; sourceTree = "<group>"; };
 		2A12B33218D1896F0084B5F9 /* NSDictionary+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeKit.h"; sourceTree = "<group>"; };
@@ -106,6 +103,12 @@
 		2A1D353B18D401F00096274C /* NSString+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SafeKit.m"; sourceTree = "<group>"; };
 		2A1D353D18D402C50096274C /* NSMutableString+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+SafeKit.h"; sourceTree = "<group>"; };
 		2A1D353E18D402C50096274C /* NSMutableString+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+SafeKit.m"; sourceTree = "<group>"; };
+		2A33699F18D9F4760012E4F3 /* SafeKitConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeKitConfig.h; sourceTree = "<group>"; };
+		2A3369A018D9F4760012E4F3 /* SafeKitConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafeKitConfig.m; sourceTree = "<group>"; };
+		2A3369A218D9F7190012E4F3 /* SKMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKMainViewController.h; sourceTree = "<group>"; };
+		2A3369A318D9F7190012E4F3 /* SKMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKMainViewController.m; sourceTree = "<group>"; };
+		2A3369A518D9F7330012E4F3 /* SKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKViewController.h; sourceTree = "<group>"; };
+		2A3369A618D9F7330012E4F3 /* SKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,10 +244,10 @@
 		2A12B32718D17F990084B5F9 /* ExampleVC */ = {
 			isa = PBXGroup;
 			children = (
-				2A12B32818D17F990084B5F9 /* CUSMainViewController.h */,
-				2A12B32918D17F990084B5F9 /* CUSMainViewController.m */,
-				2A12B32A18D17F990084B5F9 /* CUSViewController.h */,
-				2A12B32B18D17F990084B5F9 /* CUSViewController.m */,
+				2A3369A218D9F7190012E4F3 /* SKMainViewController.h */,
+				2A3369A318D9F7190012E4F3 /* SKMainViewController.m */,
+				2A3369A518D9F7330012E4F3 /* SKViewController.h */,
+				2A3369A618D9F7330012E4F3 /* SKViewController.m */,
 			);
 			path = ExampleVC;
 			sourceTree = "<group>";
@@ -285,6 +288,8 @@
 				2A1D353318D3FD0D0096274C /* NSObject+Swizzle.m */,
 				2A1D353418D3FD0D0096274C /* SafeKitLog.h */,
 				2A1D353518D3FD0D0096274C /* SafeKitLog.m */,
+				2A33699F18D9F4760012E4F3 /* SafeKitConfig.h */,
+				2A3369A018D9F4760012E4F3 /* SafeKitConfig.m */,
 			);
 			path = SafeCore;
 			sourceTree = "<group>";
@@ -391,20 +396,21 @@
 				2A12B34A18D1A0BC0084B5F9 /* CYRLayoutManager.m in Sources */,
 				2A12B35018D1A0C30084B5F9 /* QEDTextView.m in Sources */,
 				2A1D353C18D401F00096274C /* NSString+SafeKit.m in Sources */,
+				2A3369A718D9F7330012E4F3 /* SKViewController.m in Sources */,
 				2A1D353618D3FD0D0096274C /* NSException+SafeKit.m in Sources */,
 				2A12B2EA18D17ECE0084B5F9 /* main.m in Sources */,
-				2A12B32C18D17F990084B5F9 /* CUSMainViewController.m in Sources */,
+				2A3369A118D9F4760012E4F3 /* SafeKitConfig.m in Sources */,
 				2A1D353F18D402C50096274C /* NSMutableString+SafeKit.m in Sources */,
 				2A12B2EE18D17ECE0084B5F9 /* DKAppDelegate.m in Sources */,
 				2A12B32318D17F250084B5F9 /* NSArray+SafeKit.m in Sources */,
 				2A1D353718D3FD0D0096274C /* NSObject+Swizzle.m in Sources */,
-				2A12B32D18D17F990084B5F9 /* CUSViewController.m in Sources */,
 				2A12B33718D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m in Sources */,
 				2A12B32418D17F250084B5F9 /* NSObject+SafeKit.m in Sources */,
 				2A12B34B18D1A0BC0084B5F9 /* CYRTextStorage.m in Sources */,
 				2A1D353818D3FD0D0096274C /* SafeKitLog.m in Sources */,
 				2A12B34C18D1A0BC0084B5F9 /* CYRTextView.m in Sources */,
 				2A12B33418D1896F0084B5F9 /* NSDictionary+SafeKit.m in Sources */,
+				2A3369A418D9F7190012E4F3 /* SKMainViewController.m in Sources */,
 				2A12B33118D184BD0084B5F9 /* NSMutableArray+SafeKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,18 +1,18 @@
 //
-//  CUSViewController.m
-//  CUSLayout
+//  SKViewController.m
+//  DurexKitExample
 //
-//  Created by zhangyu on 14-2-21.
-//
+//  Created by zhangyu on 14-3-20.
+//  Copyright (c) 2014年 zhangyu. All rights reserved.
 //
 
-#import "CUSViewController.h"
+#import "SKViewController.h"
 
-@interface CUSViewController ()
+@interface SKViewController ()
 
 @end
 
-@implementation CUSViewController
+@implementation SKViewController
 
 - (void)viewDidLoad
 {

@@ -12,12 +12,12 @@
 @implementation NSException(SafeKit)
 -(void)printStackTrace{
     NSString *exceptionStr = [NSException formatExceptionToString:self withReason:nil];
-    [[SafeKitLog shareInstance]logExc:@"%@",exceptionStr];
+    [[SafeKitLog shareInstance]log:exceptionStr];
 }
 
 -(void)printStackTrace:(NSString *)reasonStr{
     NSString *exceptionStr = [NSException formatExceptionToString:self withReason:reasonStr];
-    [[SafeKitLog shareInstance]logExc:@"%@",exceptionStr];
+    [[SafeKitLog shareInstance]log:exceptionStr];
 }
 
 +(NSString *)formatExceptionToString:(NSException *)exception withReason:(NSString *)reasonStr{

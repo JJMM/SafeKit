@@ -1,46 +1,36 @@
 //
-//  CUSMainViewController.m
-//  CUSPadFrameSample
+//  SKMainViewController.m
+//  DurexKitExample
 //
-//  Created by zhangyu on 13-4-3.
-//  Copyright (c) 2013年 zhangyu. All rights reserved.
+//  Created by zhangyu on 14-3-20.
+//  Copyright (c) 2014年 zhangyu. All rights reserved.
 //
 
-#import "CUSMainViewController.h"
+#import "SKMainViewController.h"
+
 #import "DurexKit.h"
 #import "QEDTextView.h"
 
-@interface CUSMainViewController () <UITextViewDelegate>
+@interface SKMainViewController () <UITextViewDelegate>
 
 @property (nonatomic, strong) QEDTextView *textView;
 
 @end
 
-@implementation CUSMainViewController
+@implementation SKMainViewController
 
 - (id)init
 {
     self = [super init];
     if (self) {
         self.title = @"DurexKit";
+        //    setSafeKitLogType(SafeKitLogTypeNone);
+        setSafeKitLogType(SafeKitLogTypeInfo | SafeKitLogTypeWarning | SafeKitLogTypeError);
     }
     return self;
 }
 
-- (void)viewDidLoad{
-    [super viewDidLoad];
-    
-//    setSafeKitLogType(SafeKitLogTypeNone);
-//    setSafeKitLogType(SafeKitLogTypeInfo);
-    setSafeKitLogType(SafeKitLogTypeDebugger);
-    
-    QEDTextView *textView = [[QEDTextView alloc] initWithFrame:self.view.bounds];
-    textView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    textView.delegate = self;
-    textView.editable = NO;
-    self.textView = textView;
-    [self.view addSubview:textView];
-    
+-(void)invokeCrashCode{
     //Array
     NSMutableArray *array = [NSMutableArray arrayWithObjects:@"aa",@"bb",nil];
     [array addObject:nil];
@@ -50,6 +40,26 @@
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"a",@"key1",@"b",@"key2", nil];
     [dictionary setObject:nil forKey:nil];
     [dictionary removeObjectForKey:nil];
+    
+    NSMutableString *str = [[NSMutableString alloc]initWithString:@"abc"];
+    [str appendString:nil];
+    
+    UIViewController *kvo = [[UIViewController alloc]init];
+    [kvo setValue:@"aa" forKey:@"titleaaa"];
+    [kvo valueForKey:@"titleasfs"];
+    [kvo valueForUndefinedKey:@"asdfasdfadssdafasdf"];
+}
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    
+    [self invokeCrashCode];
+    
+    QEDTextView *textView = [[QEDTextView alloc] initWithFrame:self.view.bounds];
+    textView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    textView.delegate = self;
+    textView.editable = NO;
+    self.textView = textView;
+    [self.view addSubview:textView];
     
     self.textView.text = @"// Will it crash?\n"\
     @"NSMutableArray *array = [NSMutableArray arrayWithObjects:@\"aa\",@\"bb\",nil];\n"\
@@ -68,21 +78,12 @@
     [button setTitle:@"no selector button" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(noneSelector:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
-    
-    NSMutableString *str = [[NSMutableString alloc]initWithString:@"abc"];
-    [str appendString:nil];
-
-    UIViewController *kvo = [[UIViewController alloc]init];
-    [kvo setValue:nil forKey:@"titleasfs"];
-    [kvo valueForKey:@"titleasfs"];
-    [kvo valueForUndefinedKey:@"asdfasdfadssdafasdf"];
-
 }
 
 
 -(void)buttonClicked:(id)sender{
     setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOn);//no crash
-//    setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOff);//crash
+    //    setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOff);//crash
     NSException *e = [NSException exceptionWithName:@"TestException" reason:@"Test" userInfo:nil];
     @throw e;
 }

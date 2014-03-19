@@ -11,16 +11,7 @@
 #import "NSException+SafeKit.h"
 #import "NSObject+swizzle.h"
 #import "SafeKitLog.h"
-
-
-static SafeKitObjectPerformExceptionCatch  safeKitObjectPerformExceptionCatchValue =  SafeKitObjectPerformExceptionCatchOn;
-
-void setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatch type){
-    safeKitObjectPerformExceptionCatchValue = type;
-}
-SafeKitObjectPerformExceptionCatch getSafeKitObjectPerformExceptionCatch(){
-    return safeKitObjectPerformExceptionCatchValue;
-}
+#import "SafeKitConfig.h"
 
 @implementation NSObject(SafeKit_Perform)
 
@@ -37,7 +28,7 @@ SafeKitObjectPerformExceptionCatch getSafeKitObjectPerformExceptionCatch(){
             methodToCall(self, aSelector);
         }
     }else{
-        [[SafeKitLog shareInstance]log:@"[%@ %@] unrecognized selector sent to instance ",[[self class]description],NSStringFromSelector(aSelector)];
+        [[SafeKitLog shareInstance]logError:[NSString stringWithFormat:@"[%@ %@] unrecognized selector sent to instance ",[[self class]description],NSStringFromSelector(aSelector)]];
     }
     return nil;
 }
@@ -54,7 +45,7 @@ SafeKitObjectPerformExceptionCatch getSafeKitObjectPerformExceptionCatch(){
             methodToCall(self, aSelector, object);
         }
     }else{
-        [[SafeKitLog shareInstance]log:@"[%@ %@] unrecognized selector sent to instance ",[[self class]description],NSStringFromSelector(aSelector)];
+        [[SafeKitLog shareInstance]logError:[NSString stringWithFormat:@"[%@ %@] unrecognized selector sent to instance ",[[self class]description],NSStringFromSelector(aSelector)]];
     }
     return nil;
 }
@@ -70,7 +61,7 @@ SafeKitObjectPerformExceptionCatch getSafeKitObjectPerformExceptionCatch(){
             methodToCall(self, aSelector, object1, object2);
         }
     }else{
-        [[SafeKitLog shareInstance]log:@"[%@ %@] unrecognized selector sent to instance ",[[self class]description],NSStringFromSelector(aSelector)];
+        [[SafeKitLog shareInstance]logError:[NSString stringWithFormat:@"[%@ %@] unrecognized selector sent to instance ",[[self class]description],NSStringFromSelector(aSelector)]];
     }
     return nil;
 }
@@ -86,11 +77,12 @@ SafeKitObjectPerformExceptionCatch getSafeKitObjectPerformExceptionCatch(){
 }
 @end
 
+
+
 @implementation NSObject(SafeKit_KVO)
 
 -(Ivar)getAllClassVariable:(Class)clazz withName:(NSString *)key{
-    Class cls = clazz;
-    Ivar ivar = class_getInstanceVariable(cls, [key UTF8String]);
+    Ivar ivar = class_getInstanceVariable(clazz, [key cStringUsingEncoding:NSASCIIStringEncoding]);
     
     if (ivar) {
         return ivar;
@@ -98,36 +90,78 @@ SafeKitObjectPerformExceptionCatch getSafeKitObjectPerformExceptionCatch(){
         if (clazz == [NSObject class]) {
             return ivar;
         }else{
-            return [self getAllClassVariable:[cls superclass] withName:key];
+            return [self getAllClassVariable:[clazz superclass] withName:key];
         }
     }
 }
 -(void)SKsetValue:(id)value forKey:(NSString *)key{
-    SK_TRY_BODY([self SKsetValue:value forKey:key];)
+    if (!key) {
+        [[SafeKitLog shareInstance]logWarning:@"key is nil"];
+        return;
+    }
+    if (![self getAllClassVariable:[self class] withName:key]) {
+        [[SafeKitLog shareInstance]logWarning:[NSString stringWithFormat:@"[%@] is UndefineKey",key]];
+        return;
+    }
+    [self SKsetValue:value forKey:key];
 }
 -(void)SKsetValue:(id)value forKeyPath:(NSString *)keyPath{
-    SK_TRY_BODY([self SKsetValue:value forKeyPath:keyPath];)
+    if (!keyPath) {
+        [[SafeKitLog shareInstance]logWarning:@"keyPath is nil"];
+        return;
+    }
+    if (![self getAllClassVariable:[self class] withName:keyPath]) {
+        [[SafeKitLog shareInstance]logWarning:[NSString stringWithFormat:@"[%@] is UndefineKey",keyPath]];
+        return;
+    }
+    [self SKsetValue:value forKeyPath:keyPath];
 }
 -(void)SKsetValue:(id)value forUndefinedKey:(NSString *)key{
-    SK_TRY_BODY([self SKsetValue:value forUndefinedKey:key];)
-}
--(void)SKsetValuesForKeysWithDictionary:(NSDictionary *)keyedValues{
-    SK_TRY_BODY([self SKsetValuesForKeysWithDictionary:keyedValues];)
+    if (!key) {
+        [[SafeKitLog shareInstance]logWarning:@"key is nil"];
+        return;
+    }
+    if (![self getAllClassVariable:[self class] withName:key]) {
+        [[SafeKitLog shareInstance]logWarning:[NSString stringWithFormat:@"[%@] is UndefineKey",key]];
+        return;
+    }
+    [self SKsetValue:value forUndefinedKey:key];
 }
 
 -(id)SKvalueForKey:(NSString *)key{
-    SK_TRY_BODY(return [self SKvalueForKey:key];)
-    return nil;
+    if (!key) {
+        [[SafeKitLog shareInstance]logWarning:@"key is nil"];
+        return nil;
+    }
+    if (![self getAllClassVariable:[self class] withName:key]) {
+        [[SafeKitLog shareInstance]logWarning:[NSString stringWithFormat:@"[%@] is UndefineKey",key]];
+        return nil;
+    }
+    return [self SKvalueForKey:key];
 }
 
 -(id)SKvalueForKeyPath:(NSString *)keyPath{
-    SK_TRY_BODY(return [self SKvalueForKeyPath:keyPath];)
-    return nil;
+    if (!keyPath) {
+        [[SafeKitLog shareInstance]logWarning:@"keyPath is nil"];
+        return nil;
+    }
+    if (![self getAllClassVariable:[self class] withName:keyPath]) {
+        [[SafeKitLog shareInstance]logWarning:[NSString stringWithFormat:@"[%@] is UndefineKey",keyPath]];
+        return nil;
+    }
+    return [self SKvalueForKeyPath:keyPath];
 }
 
 -(id)SKvalueForUndefinedKey:(NSString *)key{
-    SK_TRY_BODY(return [self SKvalueForUndefinedKey:key];)
-    return nil;
+    if (!key) {
+        [[SafeKitLog shareInstance]logWarning:@"key is nil"];
+        return nil;
+    }
+    if (![self getAllClassVariable:[self class] withName:key]) {
+        [[SafeKitLog shareInstance]logWarning:[NSString stringWithFormat:@"[%@] is UndefineKey",key]];
+        return nil;
+    }
+    return [self SKvalueForUndefinedKey:key];
 }
 + (void) load{
     static dispatch_once_t onceToken;
@@ -135,13 +169,12 @@ SafeKitObjectPerformExceptionCatch getSafeKitObjectPerformExceptionCatch(){
         [self swizzleMethod:@selector(SKsetValue:forKey:) tarSel:@selector(setValue:forKey:)];
         [self swizzleMethod:@selector(SKsetValue:forKeyPath:) tarSel:@selector(setValue:forKeyPath:)];
         [self swizzleMethod:@selector(SKsetValue:forUndefinedKey:) tarSel:@selector(setValue:forUndefinedKey:)];
-        [self swizzleMethod:@selector(SKsetValuesForKeysWithDictionary:) tarSel:@selector(setValuesForKeysWithDictionary:)];
         
         [self swizzleMethod:@selector(SKvalueForKey:) tarSel:@selector(valueForKey:)];
         [self swizzleMethod:@selector(SKvalueForKeyPath:) tarSel:@selector(valueForKeyPath:)];
         [self swizzleMethod:@selector(SKvalueForUndefinedKey:) tarSel:@selector(valueForUndefinedKey:)];
     });
-    
+
 }
 @end
 

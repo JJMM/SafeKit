@@ -8,7 +8,7 @@
 
 #import "SafeKitLog.h"
 #import "NSException+SafeKit.h"
-
+#import "SafeKitConfig.h"
 
 SafeKitLog *SafeKitLogInstance;
 
@@ -41,62 +41,93 @@ SafeKitLog *SafeKitLogInstance;
     }
     return SafeKitLogInstance;
 }
--(void)log:(NSString *)format, ...{
-    if (getSafeKitLogType() == SafeKitLogTypeNone) {
-        return;
+//-(void)log:(NSString *)format, ...{
+//    if (getSafeKitLogType() == SafeKitLogTypeNone) {
+//        return;
+//    }
+//    if (format) {
+//        va_list arguments;
+//        va_start(arguments, format);
+//        va_end(arguments);
+//        
+//        [self.printer printv:[NSString stringWithFormat:@"SafeKit:%@",format] withArgs:arguments];
+//    }
+//    
+//    if (getSafeKitLogType() == SafeKitLogTypeDebugger) {
+//        @try {
+//            NSException *e = [NSException exceptionWithName:@"SafeKit" reason:@"StackTrace" userInfo:nil];
+//            @throw e;
+//        }
+//        @catch (NSException *exception) {
+//            [exception printStackTrace];
+//        }
+//        @finally {
+//            
+//        }
+//    }
+//}
+//-(void)logExc:(NSString *)format, ...{
+//    if (getSafeKitLogType() == SafeKitLogTypeNone) {
+//        return;
+//    }
+//    if (format) {
+//        va_list arguments;
+//        va_start(arguments, format);
+//        va_end(arguments);
+//        [self.printer printv:format withArgs:arguments];
+//    }
+//}
+
+-(void)log:(NSString *)aString{
+    [self.printer print:aString];
+}
+-(void)logInfo:(NSString *)aString{
+    if ((getSafeKitLogType() & SafeKitLogTypeInfo) != 0) {
+        [self log:aString];
     }
-    if (format) {
-        va_list arguments;
-        va_start(arguments, format);
-        va_end(arguments);
+}
+-(void)logWarning:(NSString *)aString{
+    if ((getSafeKitLogType() & SafeKitLogTypeWarning) != 0) {
+        [self log:aString];
         
-        [self.printer printv:[NSString stringWithFormat:@"SafeKit:%@",format] withArgs:arguments];
-    }
-    
-    if (getSafeKitLogType() == SafeKitLogTypeDebugger) {
+        //show stack trace
         @try {
-            NSException *e = [NSException exceptionWithName:@"SafeKit" reason:@"StackTrace" userInfo:nil];
+            NSException *e = [NSException exceptionWithName:@"SafeKit" reason:@"WarningStackTrace" userInfo:nil];
             @throw e;
         }
         @catch (NSException *exception) {
             [exception printStackTrace];
         }
-        @finally {
-            
+    }
+}
+-(void)logError:(NSString *)aString{
+    if ((getSafeKitLogType() & SafeKitLogTypeError) != 0) {
+        [self log:aString];
+        
+        //show stack trace
+        @try {
+            NSException *e = [NSException exceptionWithName:@"SafeKit" reason:@"ErrorStackTrace" userInfo:nil];
+            @throw e;
+        }
+        @catch (NSException *exception) {
+            [exception printStackTrace];
         }
     }
 }
--(void)logExc:(NSString *)format, ...{
-    if (getSafeKitLogType() == SafeKitLogTypeNone) {
-        return;
-    }
-    if (format) {
-        va_list arguments;
-        va_start(arguments, format);
-        va_end(arguments);
-        [self.printer printv:format withArgs:arguments];
-    }
-}
-
 @end
 
 @implementation SafeKitPrinter
--(void)printv:(NSString *)format withArgs:(va_list)args{
+-(void)print:(NSString *)aString{
 
 }
 @end
 
 
 @implementation SafeKitConsolePrinter
--(void)printv:(NSString *)format withArgs:(va_list)args{
-    NSLogv(format, args);
+-(void)print:(NSString *)aString{
+    if (!aString) {
+        return;
+    }
+    NSLog(@"%@",aString);
 }
 @end
-
-static SafeKitLogType SafeKitLogTypeValue = SafeKitLogTypeDebugger;
-void setSafeKitLogType(SafeKitLogType logType){
-    SafeKitLogTypeValue = logType;
-}
-SafeKitLogType getSafeKitLogType(){
-    return SafeKitLogTypeValue;
-}

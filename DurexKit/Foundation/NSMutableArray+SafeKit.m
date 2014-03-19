@@ -13,14 +13,14 @@
 @implementation NSMutableArray(SafeKit)
 -(id)SKobjectAtIndex:(NSUInteger)index{
     if (index >= [self count]) {
-        [[SafeKitLog shareInstance]log:@"index[%ld] >= count[%ld]",(long)index ,(long)[self count]];
+        [[SafeKitLog shareInstance]logWarning:[NSString stringWithFormat:@"index[%ld] >= count[%ld]",(long)index ,(long)[self count]]];
         return nil;
     }
     return [self SKobjectAtIndex:index];
 }
 - (NSArray *)SKarrayByAddingObject:(id)anObject{
     if (anObject) {
-        [[SafeKitLog shareInstance]log:@"object is nil"];
+        [[SafeKitLog shareInstance]logWarning:[NSString stringWithFormat:@"object is nil"]];
         return nil;
     }
     return [self SKarrayByAddingObject:anObject];
@@ -28,18 +28,18 @@
 
 -(void)SKaddObject:(id)anObject{
     if (!anObject) {
-        [[SafeKitLog shareInstance]log:@"object is nil"];
+        [[SafeKitLog shareInstance]logWarning:@"object is nil"];
         return;
     }
     [self SKaddObject:anObject];
 }
 - (void)SKinsertObject:(id)anObject atIndex:(NSUInteger)index{
     if (index > [self count]) {
-        [[SafeKitLog shareInstance]log:@"index[%ld] > count[%ld]",(long)index ,(long)[self count]];
+        [[SafeKitLog shareInstance]logWarning:[NSString stringWithFormat:@"index[%ld] > count[%ld]",(long)index ,(long)[self count]]];
         return;
     }
     if (!anObject) {
-        [[SafeKitLog shareInstance]log:@"object is nil"];
+        [[SafeKitLog shareInstance]logWarning:@"object is nil"];
         return;
     }
     [self SKinsertObject:anObject atIndex:index];
@@ -47,7 +47,7 @@
 
 - (void)SKremoveObjectAtIndex:(NSUInteger)index{
     if (index >= [self count]) {
-        [[SafeKitLog shareInstance]log:@"index[%ld] >= count[%ld]",(long)index ,(long)[self count]];
+        [[SafeKitLog shareInstance]logWarning:[NSString stringWithFormat:@"index[%ld] >= count[%ld]",(long)index ,(long)[self count]]];
         return;
     }
     
@@ -55,11 +55,11 @@
 }
 - (void)SKreplaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject{
     if (index >= [self count]) {
-        [[SafeKitLog shareInstance]log:@"index[%ld] >= count[%ld]",(long)index ,(long)[self count]];
+        [[SafeKitLog shareInstance]logWarning:[NSString stringWithFormat:@"index[%ld] >= count[%ld]",(long)index ,(long)[self count]]];
         return;
     }
     if (!anObject) {
-        [[SafeKitLog shareInstance]log:@"object is nil"];
+        [[SafeKitLog shareInstance]logWarning:@"object is nil"];
         return;
     }
     [self SKreplaceObjectAtIndex:index withObject:anObject];

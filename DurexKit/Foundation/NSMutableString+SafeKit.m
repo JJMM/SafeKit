@@ -17,18 +17,26 @@
 //- (void)appendFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 
 - (void)SKappendString:(NSString *)aString{
-    SK_TRY_BODY([self SKappendString:aString];)
+    if (!aString) {
+        [[SafeKitLog shareInstance]logWarning:@"aString is nil"];
+        return;
+    }
+    [self SKappendString:aString];
 }
-//- (void)SKappendFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2){
-//    if (!format) {
-//        return;
-//    }
-//    va_list arguments = NULL;
-//    [self appendFormat:format,arguments];
-//}
+- (void)SKappendFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2){
+    if (!format) {
+        [[SafeKitLog shareInstance]logWarning:@"format is nil"];
+        return;
+    }
+    va_list arguments;
+    va_start(arguments, format);
+    NSString *formatStr = [[NSString alloc]initWithFormat:format arguments:arguments];
+    [self SKappendFormat:@"%@",formatStr];
+    va_end(arguments);
+}
 - (void)SKsetString:(NSString *)aString{
     if (!aString) {
-        [[SafeKitLog shareInstance]log:@"aString is nil"];
+        [[SafeKitLog shareInstance]logWarning:@"aString is nil"];
         return;
     }
     [self SKsetString:aString];
@@ -36,11 +44,11 @@
 
 - (void)SKinsertString:(NSString *)aString atIndex:(NSUInteger)index{
     if (index > [self length]) {
-        [[SafeKitLog shareInstance]log:@"index[%ld] > length[%ld]",(long)index ,(long)[self length]];
+        [[SafeKitLog shareInstance]logWarning:[NSString stringWithFormat:@"index[%ld] > length[%ld]",(long)index ,(long)[self length]]];
         return;
     }
     if (!aString) {
-        [[SafeKitLog shareInstance]log:@"aString is nil"];
+        [[SafeKitLog shareInstance]logWarning:@"aString is nil"];
         return;
     }
     
@@ -51,6 +59,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [self swizzleMethod:@selector(SKappendString:) tarClass:@"__NSCFConstantString" tarSel:@selector(appendString:)];
+        [self swizzleMethod:@selector(SKappendFormat:) tarClass:@"__NSCFConstantString" tarSel:@selector(appendFormat:)];
         [self swizzleMethod:@selector(SKsetString:) tarClass:@"__NSCFConstantString" tarSel:@selector(setString:)];
         [self swizzleMethod:@selector(SKinsertString:atIndex:) tarClass:@"__NSCFConstantString" tarSel:@selector(insertString:atIndex:)];
     

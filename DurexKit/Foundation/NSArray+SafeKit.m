@@ -14,7 +14,7 @@
 @implementation NSArray(SafeKit)
 -(id)SKobjectAtIndex:(NSUInteger)index{
     if (index >= [self count]) {
-        [[SafeKitLog shareInstance]log:@"index[%ld] >= count[%ld]",(long)index ,(long)[self count]];
+        [[SafeKitLog shareInstance]logWarning:[NSString stringWithFormat:@"index[%ld] >= count[%ld]",(long)index ,(long)[self count]]];
         return nil;
     }
     return [self SKobjectAtIndex:index];

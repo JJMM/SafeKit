@@ -14,18 +14,18 @@
 
 - (void)SKremoveObjectForKey:(id)aKey{
     if (!aKey) {
-        [[SafeKitLog shareInstance]log:@"key is nil"];
+        [[SafeKitLog shareInstance]logWarning:@"key is nil"];
         return;
     }
     [self SKremoveObjectForKey:aKey];
 }
 - (void)SKsetObject:(id)anObject forKey:(id <NSCopying>)aKey{
     if (!anObject) {
-        [[SafeKitLog shareInstance]log:@"object is nil"];
+        [[SafeKitLog shareInstance]logWarning:@"object is nil"];
         return;
     }
     if (!aKey) {
-        [[SafeKitLog shareInstance]log:@"key is nil"];
+        [[SafeKitLog shareInstance]logWarning:@"key is nil"];
         return;
     }
     [self SKsetObject:anObject forKey:aKey];
