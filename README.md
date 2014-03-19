@@ -23,15 +23,26 @@ Our goal is no crash.<br>
 ## Log
 ```objective-c
 typedef enum{
-    SafeKitLogTypeNone,
-    SafeKitLogTypeInfo,
-    SafeKitLogTypeDebugger,
-    SafeKitLogTypeError//unimplementate
+    SafeKitLogTypeNone,//don't print anything
+    SafeKitLogTypeInfo,//print summary info
+    SafeKitLogTypeDebugger//print stack trace
 } SafeKitLogType;
 
-[SafeKitLog setLogType:SafeKitLogTypeNone];
-[SafeKitLog setLogType:SafeKitLogTypeInfo];
-[SafeKitLog setLogType:SafeKitLogTypeDebugger];
+setSafeKitLogType(SafeKitLogTypeNone);
+setSafeKitLogType(SafeKitLogTypeInfo);
+setSafeKitLogType(SafeKitLogTypeDebugger);
+```
+
+## Method perform
+```objective-c
+typedef enum{
+    SafeKitObjectPerformExceptionCatchOn,
+    SafeKitObjectPerformExceptionCatchOff
+} SafeKitObjectPerformExceptionCatch;
+
+setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOn);
+setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOff);
+
 ```
 ## License
 
