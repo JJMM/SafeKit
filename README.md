@@ -44,6 +44,30 @@ setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOn);
 setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOff);
 
 ```
+[[SafeKitLog shareInstance]log:@“info“];
+The method will invoke NSLog to print  “info” on console.Also,you could use yourself way to record log.You just need to implement the interface of ”SafeKitPrinter”.
+
+This is default implementation.
+```objective-c
+@interface SafeKitConsolePrinter : SafeKitPrinter
+
+@end
+
+[[SafeKitLog shareInstance]setPrinter:printer];
+```
+ 
+## Method perform
+```objective-c
+typedef enum{
+    SafeKitObjectPerformExceptionCatchOn,
+    SafeKitObjectPerformExceptionCatchOff
+} SafeKitObjectPerformExceptionCatch;
+
+setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOn);
+setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOff);
+
+```
+
 ## License
 
 DurexKit is licensed under the terms of the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html). Please see the [LICENSE](LICENSE) file for full details.
