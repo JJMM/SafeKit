@@ -19,24 +19,32 @@ Our goal is no crash.<br>
 }
 
 ```
+## Power
+```objective-c
+typedef enum{
+    SafeKitPowerOn,//default
+    SafeKitPowerOff
+} SafeKitPower;
+
+//Shutdown DurexKit
+void setSafeKitPower(SafeKitPowerOff);
+```
 
 ## Log
 ```objective-c
-typedef enum{
-    SafeKitLogTypeNone,//don't print anything
-    SafeKitLogTypeInfo,//print summary info
-    SafeKitLogTypeDebugger//print stack trace
-} SafeKitLogType;
+#define SafeKitLogTypeNone 0
+#define SafeKitLogTypeInfo 1
+#define SafeKitLogTypeWarning 2
+#define SafeKitLogTypeError 4
 
 setSafeKitLogType(SafeKitLogTypeNone);
-setSafeKitLogType(SafeKitLogTypeInfo);
-setSafeKitLogType(SafeKitLogTypeDebugger);
+setSafeKitLogType(SafeKitLogTypeInfo | SafeKitLogTypeWarning | SafeKitLogTypeError);
 ```
 
 ## Method perform
 ```objective-c
 typedef enum{
-    SafeKitObjectPerformExceptionCatchOn,
+    SafeKitObjectPerformExceptionCatchOn,//default
     SafeKitObjectPerformExceptionCatchOff
 } SafeKitObjectPerformExceptionCatch;
 
