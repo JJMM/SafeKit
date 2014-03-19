@@ -25,6 +25,5 @@
     dispatch_once(&onceToken, ^{
         [self swizzleMethod:@selector(SKobjectAtIndex:) tarClass:@"__NSArrayI" tarSel:@selector(objectAtIndex:)];
     });
-
 }
 @end

@@ -11,3 +11,4 @@
 @interface NSMutableDictionary(SafeKit)
 
 @end
+

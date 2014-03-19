@@ -10,6 +10,7 @@
 #import "NSObject+swizzle.h"
 #import "SafeKitLog.h"
 #import "NSException+SafeKit.h"
+
 @implementation NSMutableArray(SafeKit)
 -(id)SKobjectAtIndex:(NSUInteger)index{
     if (index >= [self count]) {

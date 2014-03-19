@@ -78,7 +78,7 @@
 @end
 
 
-
+///////     KVO      ///////
 @implementation NSObject(SafeKit_KVO)
 
 -(Ivar)getAllClassVariable:(Class)clazz withName:(NSString *)key{

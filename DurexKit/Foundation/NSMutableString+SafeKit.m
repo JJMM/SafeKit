@@ -23,6 +23,7 @@
     }
     [self SKappendString:aString];
 }
+
 - (void)SKappendFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2){
     if (!format) {
         [[SafeKitLog shareInstance]logWarning:@"format is nil"];
@@ -34,6 +35,7 @@
     [self SKappendFormat:@"%@",formatStr];
     va_end(arguments);
 }
+
 - (void)SKsetString:(NSString *)aString{
     if (!aString) {
         [[SafeKitLog shareInstance]logWarning:@"aString is nil"];
@@ -62,9 +64,6 @@
         [self swizzleMethod:@selector(SKappendFormat:) tarClass:@"__NSCFConstantString" tarSel:@selector(appendFormat:)];
         [self swizzleMethod:@selector(SKsetString:) tarClass:@"__NSCFConstantString" tarSel:@selector(setString:)];
         [self swizzleMethod:@selector(SKinsertString:atIndex:) tarClass:@"__NSCFConstantString" tarSel:@selector(insertString:atIndex:)];
-    
     });
-    
-    
 }
 @end

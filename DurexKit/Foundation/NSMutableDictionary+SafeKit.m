@@ -10,6 +10,7 @@
 #import "NSObject+swizzle.h"
 #import "SafeKitLog.h"
 #import "NSException+SafeKit.h"
+
 @implementation NSMutableDictionary(SafeKit)
 
 - (void)SKremoveObjectForKey:(id)aKey{
@@ -19,6 +20,7 @@
     }
     [self SKremoveObjectForKey:aKey];
 }
+
 - (void)SKsetObject:(id)anObject forKey:(id <NSCopying>)aKey{
     if (!anObject) {
         [[SafeKitLog shareInstance]logWarning:@"object is nil"];
@@ -30,7 +32,6 @@
     }
     [self SKsetObject:anObject forKey:aKey];
 }
-
 
 + (void) load{
     static dispatch_once_t onceToken;
