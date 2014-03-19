@@ -19,7 +19,7 @@ void setSafeKitLogType(NSInteger type);
 NSInteger getSafeKitLogType();
 
 typedef enum{
-    SafeKitObjectPerformExceptionCatchOn,
+    SafeKitObjectPerformExceptionCatchOn,//default
     SafeKitObjectPerformExceptionCatchOff
 } SafeKitObjectPerformExceptionCatch;
 
@@ -28,7 +28,7 @@ SafeKitObjectPerformExceptionCatch getSafeKitObjectPerformExceptionCatch();
 
 
 typedef enum{
-    SafeKitPowerOn,
+    SafeKitPowerOn,//default
     SafeKitPowerOff
 } SafeKitPower;
 
