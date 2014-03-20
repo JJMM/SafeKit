@@ -79,7 +79,7 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     button.frame = CGRectMake(50, self.view.frame.size.height - 130, 210, 30);
     [button setTitle:@"no selector button" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(dddbuttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(noneSelector:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
 }
 

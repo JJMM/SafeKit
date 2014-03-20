@@ -114,11 +114,36 @@
     method_getReturnType(method, ret, 128);
     
     char c = ret[0];
-    if (c == 'v' || c == 'c' || c == 'i'||c == 'd'||c == 'l'||c == 's') {
-        return NO;
-    }else{
+    
+    if (c == '@') {
         return YES;
+    }else{
+        return NO;
     }
+    
+//    if (c == 'v') {//void
+//        return NO;
+//    }else if (c == 'c') {//char
+//        return NO;
+//    }else if (c == 'i') {//int UInteger
+//        return NO;
+//    }else if (c == 'd') {//double
+//        return NO;
+//    }else if (c == 'l') {//long
+//        return NO;
+//    }else if (c == 's') {//short
+//        return NO;
+//    }else if (c == 'f') {//float
+//        return NO;
+//    }else if (c == '*') {//char *
+//        return NO;
+//    }else if (c == '^') {//char **
+//        return NO;
+//    }else if (c == 'I') {//unsigned
+//        return NO;
+//    }else{
+//        return YES;
+//    }
 }
 
 + (void) load{
