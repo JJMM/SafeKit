@@ -10,6 +10,7 @@
 
 #import "DurexKit.h"
 #import "QEDTextView.h"
+#import <objc/runtime.h>
 
 @interface SKMainViewController () <UITextViewDelegate>
 
@@ -44,10 +45,12 @@
     NSMutableString *str = [[NSMutableString alloc]initWithString:@"abc"];
     [str appendString:nil];
     
-    UIViewController *kvo = [[UIViewController alloc]init];
-    [kvo setValue:@"aa" forKey:@"titleaaa"];
-    [kvo valueForKey:@"titleasfs"];
-    [kvo valueForUndefinedKey:@"asdfasdfadssdafasdf"];
+//    UIViewController *kvo = [[UIViewController alloc]init];
+//    
+//    [kvo setValue:@"aa" forKey:@"titleaaa"];
+//    [kvo valueForKey:@"titleasfs"];
+//    [kvo valueForUndefinedKey:@"asdfasdfadssdafasdf"];
+
 }
 - (void)viewDidLoad{
     [super viewDidLoad];
@@ -76,7 +79,7 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     button.frame = CGRectMake(50, self.view.frame.size.height - 130, 210, 30);
     [button setTitle:@"no selector button" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(noneSelector:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(dddbuttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
 }
 
@@ -84,8 +87,9 @@
 -(void)buttonClicked:(id)sender{
     setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOn);//no crash
     //    setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOff);//crash
-    NSException *e = [NSException exceptionWithName:@"TestException" reason:@"Test" userInfo:nil];
-    @throw e;
+//    NSException *e = [NSException exceptionWithName:@"TestException" reason:@"Test" userInfo:nil];
+//    @throw e;
+//    return [NSNumber numberWithInt:1];
 }
 
 @end
