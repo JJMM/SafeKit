@@ -19,16 +19,6 @@ Our goal is no crash.<br>
 }
 
 ```
-## Power
-```objective-c
-typedef enum{
-    SafeKitPowerOn,//default
-    SafeKitPowerOff
-} SafeKitPower;
-
-//Shutdown DurexKit
-void setSafeKitPower(SafeKitPowerOff);
-```
 
 ## Log
 ```objective-c
@@ -39,19 +29,7 @@ void setSafeKitPower(SafeKitPowerOff);
 
 setSafeKitLogType(SafeKitLogTypeNone);
 setSafeKitLogType(SafeKitLogTypeInfo | SafeKitLogTypeWarning | SafeKitLogTypeError);
-```
 
-## Method perform
-```objective-c
-typedef enum{
-    SafeKitObjectPerformExceptionCatchOn,//default
-    SafeKitObjectPerformExceptionCatchOff
-} SafeKitObjectPerformExceptionCatch;
-
-setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOn);
-setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOff);
-
-```
 [[SafeKitLog shareInstance]log:@“info“];
 The method will invoke NSLog to print  “info” on console.Also,you could use yourself way to record log.You just need to implement the interface of ”SafeKitPrinter”.
 
@@ -63,11 +41,12 @@ This is default implementation.
 
 [[SafeKitLog shareInstance]setPrinter:printer];
 ```
- 
+```
+
 ## Method perform
 ```objective-c
 typedef enum{
-    SafeKitObjectPerformExceptionCatchOn,
+    SafeKitObjectPerformExceptionCatchOn,//default
     SafeKitObjectPerformExceptionCatchOff
 } SafeKitObjectPerformExceptionCatch;
 

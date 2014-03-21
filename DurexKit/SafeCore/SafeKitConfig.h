@@ -25,13 +25,3 @@ typedef enum{
 
 void setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatch type);
 SafeKitObjectPerformExceptionCatch getSafeKitObjectPerformExceptionCatch();
-
-
-typedef enum{
-    SafeKitPowerOn,//default
-    SafeKitPowerOff
-} SafeKitPower;
-
-// enable swizzle method 
-void setSafeKitPower(SafeKitPower power);
-SafeKitPower getSafeKitPower();

@@ -39,9 +39,6 @@
     if (!tarSel) {
         return;
     }
-    if (getSafeKitPower() == SafeKitPowerOff) {
-        return;
-    }
     SK_TRY_BODY(
                 Method srcMethod = class_getInstanceMethod(srcClass,srcSel);
                 Method tarMethod = class_getInstanceMethod(tarClass,tarSel);

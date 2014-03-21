@@ -10,7 +10,6 @@
 
 static NSInteger SafeKitLogTypeValue = SafeKitLogTypeError;
 static SafeKitObjectPerformExceptionCatch safeKitObjectPerformExceptionCatchValue =  SafeKitObjectPerformExceptionCatchOn;
-static SafeKitPower SafeKitPowerValue = SafeKitPowerOn;
 
 
 ////////   Log   ////////
@@ -28,12 +27,4 @@ void setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatch ty
 }
 SafeKitObjectPerformExceptionCatch getSafeKitObjectPerformExceptionCatch(){
     return safeKitObjectPerformExceptionCatchValue;
-}
-
-////////   power   ////////
-void setSafeKitPower(SafeKitPower power){
-    SafeKitPowerValue = power;
-}
-SafeKitPower getSafeKitPower(){
-    return SafeKitPowerValue;
 }
