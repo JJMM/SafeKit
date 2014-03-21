@@ -31,6 +31,7 @@ setSafeKitLogType(SafeKitLogTypeNone);
 setSafeKitLogType(SafeKitLogTypeInfo | SafeKitLogTypeWarning | SafeKitLogTypeError);
 
 [[SafeKitLog shareInstance]log:@“info“];
+```
 The method will invoke NSLog to print  “info” on console.Also,you could use yourself way to record log.You just need to implement the interface of ”SafeKitPrinter”.
 
 This is default implementation.
@@ -40,7 +41,6 @@ This is default implementation.
 @end
 
 [[SafeKitLog shareInstance]setPrinter:printer];
-```
 ```
 
 ## Method perform
