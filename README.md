@@ -1,6 +1,6 @@
 DurexKit could greatly reduce the probability of crash.<br>
 It’s very easy to use without modifying any code.<br>
-![image](https://github.com/JJMM/CUSResources/raw/master/DurexKitIntr.png)
+![image](https://github.com/JJMM/CUSResources/raw/master/DurexKitIntr.jpg)
 
 ## How To Get Started
 1.Download the source code and copy the folder named "DurexKit" to your project.<br>
