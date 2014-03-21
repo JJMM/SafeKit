@@ -1,14 +1,10 @@
-DurexKit
-========
-
-An open source SafeKit for iOS.<br>
-Our goal is no crash.<br>
+DurexKit could greatly reduce the probability of crash.<br>
+It’s very easy to use without modifying any code.<br>
 ![image](https://github.com/JJMM/CUSResources/raw/master/DurexKitIntr.png)
 
 ## How To Get Started
-1.Copy the folder of "DurexKit" to your project.<br>
-2.#import "DurexKit.h"<br>
-3.You don't change any codes to use it.Very easy.<br>
+1.Download the source code and copy the folder named "DurexKit" to your project.<br>
+2.#import "DurexKit.h" (Not required)<br>
 
 
 ## exchange the method in NSArray,NSDictionary…
