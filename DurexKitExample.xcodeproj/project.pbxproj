@@ -39,6 +39,7 @@
 		2A3369A118D9F4760012E4F3 /* SafeKitConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3369A018D9F4760012E4F3 /* SafeKitConfig.m */; };
 		2A3369A418D9F7190012E4F3 /* SKMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3369A318D9F7190012E4F3 /* SKMainViewController.m */; };
 		2A3369A718D9F7330012E4F3 /* SKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3369A618D9F7330012E4F3 /* SKViewController.m */; };
+		2A40E89118E008020044D348 /* SafeKitMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A40E89018E008020044D348 /* SafeKitMacro.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,8 @@
 		2A3369A318D9F7190012E4F3 /* SKMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKMainViewController.m; sourceTree = "<group>"; };
 		2A3369A518D9F7330012E4F3 /* SKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKViewController.h; sourceTree = "<group>"; };
 		2A3369A618D9F7330012E4F3 /* SKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKViewController.m; sourceTree = "<group>"; };
+		2A40E88F18E007330044D348 /* SafeKitMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafeKitMacro.h; sourceTree = "<group>"; };
+		2A40E89018E008020044D348 /* SafeKitMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafeKitMacro.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +293,8 @@
 				2A1D353518D3FD0D0096274C /* SafeKitLog.m */,
 				2A33699F18D9F4760012E4F3 /* SafeKitConfig.h */,
 				2A3369A018D9F4760012E4F3 /* SafeKitConfig.m */,
+				2A40E88F18E007330044D348 /* SafeKitMacro.h */,
+				2A40E89018E008020044D348 /* SafeKitMacro.m */,
 			);
 			path = SafeCore;
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 				2A3369A118D9F4760012E4F3 /* SafeKitConfig.m in Sources */,
 				2A1D353F18D402C50096274C /* NSMutableString+SafeKit.m in Sources */,
 				2A12B2EE18D17ECE0084B5F9 /* DKAppDelegate.m in Sources */,
+				2A40E89118E008020044D348 /* SafeKitMacro.m in Sources */,
 				2A12B32318D17F250084B5F9 /* NSArray+SafeKit.m in Sources */,
 				2A1D353718D3FD0D0096274C /* NSObject+Swizzle.m in Sources */,
 				2A12B33718D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m in Sources */,

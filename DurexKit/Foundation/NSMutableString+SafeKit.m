@@ -10,6 +10,7 @@
 #import "NSObject+swizzle.h"
 #import "SafeKitLog.h"
 #import "NSException+SafeKit.h"
+#import "SafeKitMacro.h"
 
 @implementation NSMutableString(SafeKit)
 
@@ -32,6 +33,7 @@
     va_list arguments;
     va_start(arguments, format);
     NSString *formatStr = [[NSString alloc]initWithFormat:format arguments:arguments];
+    formatStr = SK_AUTORELEASE(formatStr);
     [self SKappendFormat:@"%@",formatStr];
     va_end(arguments);
 }
