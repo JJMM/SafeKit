@@ -7,21 +7,35 @@
 //
 
 #import <Foundation/Foundation.h>
-#define SafeKitLogTypeNone 0
-#define SafeKitLogTypeInfo 1
-#define SafeKitLogTypeWarning 2
-#define SafeKitLogTypeError 4
+#define SafeKitLogTypeNone 0     //Don't print any log
+#define SafeKitLogTypeInfo 1     //print log info
+#define SafeKitLogTypeWarning 2  //print log warning
+#define SafeKitLogTypeError 4    //print log error
 
-//SafeKitLogTypeInfo | SafeKitLogTypeWarning | SafeKitLogTypeError
+/*
+ * You could use "|" join the diffrent type.
+ * eg:setSafeKitLogType(SafeKitLogTypeInfo | SafeKitLogTypeWarning | SafeKitLogTypeError);
+ */
 void setSafeKitLogType(NSInteger type);
 
-//use it such as: if ((getSafeKitLogType() & SafeKitLogTypeError) != 0) { ... }
+/*
+ * To get SafeKitLog type
+ * eg: if ((getSafeKitLogType() & SafeKitLogTypeError) != 0) { ... }
+ */
 NSInteger getSafeKitLogType();
 
+
 typedef enum{
-    SafeKitObjectPerformExceptionCatchOn,//default
+    SafeKitObjectPerformExceptionCatchOn,//When Object invoke the method named performSelector,it will add try .. catch
     SafeKitObjectPerformExceptionCatchOff
 } SafeKitObjectPerformExceptionCatch;
 
+/*
+ * Set method
+ */
 void setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatch type);
+
+/*
+ * Get method
+ */
 SafeKitObjectPerformExceptionCatch getSafeKitObjectPerformExceptionCatch();

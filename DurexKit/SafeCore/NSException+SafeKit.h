@@ -18,8 +18,19 @@
 @finally {\
 \
 }
-
+/*
+ * This category adds methods to the NSException.
+ */
 @interface NSException(SafeKit)
+
+/*
+ * To print stack trace.
+ */
 -(void)printStackTrace;
+
+/*
+ * To print stack trace.
+ * @param reasonStr the reason of exception trace
+ */
 -(void)printStackTrace:(NSString *)reasonStr;
 @end

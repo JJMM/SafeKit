@@ -27,6 +27,7 @@ SafeKitLog *SafeKitLogInstance;
     }
     return self;
 }
+
 - (id)initWithPrinter:(SafeKitPrinter *)printer
 {
     self = [super init];
@@ -35,57 +36,24 @@ SafeKitLog *SafeKitLogInstance;
     }
     return self;
 }
+
 +(SafeKitLog *)shareInstance{
     if (!SafeKitLogInstance) {
         SafeKitLogInstance = [[SafeKitLog alloc]init];
     }
     return SafeKitLogInstance;
 }
-//-(void)log:(NSString *)format, ...{
-//    if (getSafeKitLogType() == SafeKitLogTypeNone) {
-//        return;
-//    }
-//    if (format) {
-//        va_list arguments;
-//        va_start(arguments, format);
-//        va_end(arguments);
-//        
-//        [self.printer printv:[NSString stringWithFormat:@"SafeKit:%@",format] withArgs:arguments];
-//    }
-//    
-//    if (getSafeKitLogType() == SafeKitLogTypeDebugger) {
-//        @try {
-//            NSException *e = [NSException exceptionWithName:@"SafeKit" reason:@"StackTrace" userInfo:nil];
-//            @throw e;
-//        }
-//        @catch (NSException *exception) {
-//            [exception printStackTrace];
-//        }
-//        @finally {
-//            
-//        }
-//    }
-//}
-//-(void)logExc:(NSString *)format, ...{
-//    if (getSafeKitLogType() == SafeKitLogTypeNone) {
-//        return;
-//    }
-//    if (format) {
-//        va_list arguments;
-//        va_start(arguments, format);
-//        va_end(arguments);
-//        [self.printer printv:format withArgs:arguments];
-//    }
-//}
 
 -(void)log:(NSString *)aString{
     [self.printer print:aString];
 }
+
 -(void)logInfo:(NSString *)aString{
     if ((getSafeKitLogType() & SafeKitLogTypeInfo) != 0) {
         [self log:aString];
     }
 }
+
 -(void)logWarning:(NSString *)aString{
     if ((getSafeKitLogType() & SafeKitLogTypeWarning) != 0) {
         [self log:aString];
@@ -100,6 +68,7 @@ SafeKitLog *SafeKitLogInstance;
         }
     }
 }
+
 -(void)logError:(NSString *)aString{
     if ((getSafeKitLogType() & SafeKitLogTypeError) != 0) {
         [self log:aString];
