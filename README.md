@@ -11,7 +11,7 @@ in the Build Phases, Add DurexKit (the lib, not the example app) as a Target Dep
 in the Link Binary With Libraries section, add the libDurexKit.a library<br>
 - 4.In YOUR Prefix.pch file, add:
 
-\#import \<DurexKit/DurexKit.h\>
+    \#import \<DurexKit/DurexKit.h\>
 
 - 5.In YOUR project configuration, on the “Build Settings” tab
 
