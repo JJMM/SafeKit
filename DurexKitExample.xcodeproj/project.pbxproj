@@ -926,6 +926,7 @@
 				2A66830418F521A6000645BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A66830818F521A6000645BF /* Build configuration list for PBXNativeTarget "DurexKitTests" */ = {
 			isa = XCConfigurationList;
@@ -934,6 +935,7 @@
 				2A66830618F521A6000645BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
