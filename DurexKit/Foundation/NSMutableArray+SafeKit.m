@@ -19,13 +19,13 @@
     }
     return [self SKobjectAtIndex:index];
 }
-- (NSArray *)SKarrayByAddingObject:(id)anObject{
-    if (anObject) {
-        [[SafeKitLog shareInstance]logWarning:[NSString stringWithFormat:@"object is nil"]];
-        return nil;
-    }
-    return [self SKarrayByAddingObject:anObject];
-}
+//- (NSArray *)SKarrayByAddingObject:(id)anObject{
+//    if (!anObject) {
+//        [[SafeKitLog shareInstance]logWarning:[NSString stringWithFormat:@"object is nil"]];
+//        return nil;
+//    }
+//    return [self SKarrayByAddingObject:anObject];
+//}
 
 -(void)SKaddObject:(id)anObject{
     if (!anObject) {
@@ -70,7 +70,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [self swizzleMethod:@selector(SKobjectAtIndex:) tarClass:@"__NSArrayM" tarSel:@selector(objectAtIndex:)];
-        [self swizzleMethod:@selector(SKarrayByAddingObject:) tarClass:@"__NSArrayM" tarSel:@selector(arrayByAddingObject:)];
+        //        [self swizzleMethod:@selector(SKarrayByAddingObject:) tarClass:@"__NSArrayM" tarSel:@selector(arrayByAddingObject:)];
         
         [self swizzleMethod:@selector(SKaddObject:) tarClass:@"__NSArrayM" tarSel:@selector(addObject:)];
         [self swizzleMethod:@selector(SKinsertObject:atIndex:) tarClass:@"__NSArrayM" tarSel:@selector(insertObject:atIndex:)];

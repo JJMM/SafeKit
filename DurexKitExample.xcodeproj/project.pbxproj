@@ -11,35 +11,58 @@
 		2A12B2E018D17ECE0084B5F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A12B2DF18D17ECE0084B5F9 /* CoreGraphics.framework */; };
 		2A12B2E218D17ECE0084B5F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A12B2E118D17ECE0084B5F9 /* UIKit.framework */; };
 		2A12B2E818D17ECE0084B5F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A12B2E618D17ECE0084B5F9 /* InfoPlist.strings */; };
-		2A12B2EA18D17ECE0084B5F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B2E918D17ECE0084B5F9 /* main.m */; };
-		2A12B2EE18D17ECE0084B5F9 /* DKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B2ED18D17ECE0084B5F9 /* DKAppDelegate.m */; };
 		2A12B2F018D17ECE0084B5F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A12B2EF18D17ECE0084B5F9 /* Images.xcassets */; };
 		2A12B2F718D17ECE0084B5F9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A12B2F618D17ECE0084B5F9 /* XCTest.framework */; };
 		2A12B2F818D17ECE0084B5F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A12B2DD18D17ECE0084B5F9 /* Foundation.framework */; };
 		2A12B2F918D17ECE0084B5F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A12B2E118D17ECE0084B5F9 /* UIKit.framework */; };
 		2A12B30118D17ECE0084B5F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A12B2FF18D17ECE0084B5F9 /* InfoPlist.strings */; };
 		2A12B30318D17ECE0084B5F9 /* DurexKitExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B30218D17ECE0084B5F9 /* DurexKitExampleTests.m */; };
-		2A12B32318D17F250084B5F9 /* NSArray+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B31D18D17F250084B5F9 /* NSArray+SafeKit.m */; };
-		2A12B32418D17F250084B5F9 /* NSObject+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B31F18D17F250084B5F9 /* NSObject+SafeKit.m */; };
-		2A12B33118D184BD0084B5F9 /* NSMutableArray+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33018D184BD0084B5F9 /* NSMutableArray+SafeKit.m */; };
-		2A12B33418D1896F0084B5F9 /* NSDictionary+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33318D1896F0084B5F9 /* NSDictionary+SafeKit.m */; };
-		2A12B33718D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33618D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m */; };
 		2A12B33F18D19E960084B5F9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A12B33D18D19E960084B5F9 /* Icon.png */; };
 		2A12B34018D19E960084B5F9 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A12B33E18D19E960084B5F9 /* Icon@2x.png */; };
-		2A12B34A18D1A0BC0084B5F9 /* CYRLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34318D1A0BC0084B5F9 /* CYRLayoutManager.m */; };
-		2A12B34B18D1A0BC0084B5F9 /* CYRTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34518D1A0BC0084B5F9 /* CYRTextStorage.m */; };
-		2A12B34C18D1A0BC0084B5F9 /* CYRTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34718D1A0BC0084B5F9 /* CYRTextView.m */; };
-		2A12B34D18D1A0BC0084B5F9 /* CYRToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34918D1A0BC0084B5F9 /* CYRToken.m */; };
-		2A12B35018D1A0C30084B5F9 /* QEDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34F18D1A0C30084B5F9 /* QEDTextView.m */; };
-		2A1D353618D3FD0D0096274C /* NSException+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353118D3FD0D0096274C /* NSException+SafeKit.m */; };
-		2A1D353718D3FD0D0096274C /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353318D3FD0D0096274C /* NSObject+Swizzle.m */; };
-		2A1D353818D3FD0D0096274C /* SafeKitLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353518D3FD0D0096274C /* SafeKitLog.m */; };
-		2A1D353C18D401F00096274C /* NSString+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353B18D401F00096274C /* NSString+SafeKit.m */; };
-		2A1D353F18D402C50096274C /* NSMutableString+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353E18D402C50096274C /* NSMutableString+SafeKit.m */; };
-		2A3369A118D9F4760012E4F3 /* SafeKitConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3369A018D9F4760012E4F3 /* SafeKitConfig.m */; };
-		2A3369A418D9F7190012E4F3 /* SKMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3369A318D9F7190012E4F3 /* SKMainViewController.m */; };
-		2A3369A718D9F7330012E4F3 /* SKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3369A618D9F7330012E4F3 /* SKViewController.m */; };
-		2A40E89118E008020044D348 /* SafeKitMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A40E89018E008020044D348 /* SafeKitMacro.m */; };
+		2A6682E818F521A6000645BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A12B2DD18D17ECE0084B5F9 /* Foundation.framework */; };
+		2A6682F518F521A6000645BF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A12B2F618D17ECE0084B5F9 /* XCTest.framework */; };
+		2A6682F618F521A6000645BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A12B2DD18D17ECE0084B5F9 /* Foundation.framework */; };
+		2A6682F718F521A6000645BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A12B2E118D17ECE0084B5F9 /* UIKit.framework */; };
+		2A6682FA18F521A6000645BF /* libDurexKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6682E718F521A6000645BF /* libDurexKit.a */; };
+		2A66830018F521A6000645BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6682FE18F521A6000645BF /* InfoPlist.strings */; };
+		2A66830218F521A6000645BF /* DurexKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A66830118F521A6000645BF /* DurexKitTests.m */; };
+		2A66830D18F5231C000645BF /* NSException+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353118D3FD0D0096274C /* NSException+SafeKit.m */; };
+		2A66830E18F5231C000645BF /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353318D3FD0D0096274C /* NSObject+Swizzle.m */; };
+		2A66830F18F5231C000645BF /* SafeKitLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353518D3FD0D0096274C /* SafeKitLog.m */; };
+		2A66831018F5231C000645BF /* SafeKitConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3369A018D9F4760012E4F3 /* SafeKitConfig.m */; };
+		2A66831118F5231C000645BF /* SafeKitMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A40E89018E008020044D348 /* SafeKitMacro.m */; };
+		2A66831218F5231C000645BF /* NSObject+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B31F18D17F250084B5F9 /* NSObject+SafeKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2A66831318F5231C000645BF /* NSArray+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B31D18D17F250084B5F9 /* NSArray+SafeKit.m */; };
+		2A66831418F5231C000645BF /* NSMutableArray+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33018D184BD0084B5F9 /* NSMutableArray+SafeKit.m */; };
+		2A66831518F5231C000645BF /* NSDictionary+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33318D1896F0084B5F9 /* NSDictionary+SafeKit.m */; };
+		2A66831618F5231C000645BF /* NSMutableDictionary+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B33618D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m */; };
+		2A66831718F5231C000645BF /* NSString+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353B18D401F00096274C /* NSString+SafeKit.m */; };
+		2A66831818F5231C000645BF /* NSMutableString+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D353E18D402C50096274C /* NSMutableString+SafeKit.m */; };
+		2A66831918F52350000645BF /* QEDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34F18D1A0C30084B5F9 /* QEDTextView.m */; };
+		2A66831A18F52350000645BF /* CYRLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34318D1A0BC0084B5F9 /* CYRLayoutManager.m */; };
+		2A66831B18F52350000645BF /* CYRTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34518D1A0BC0084B5F9 /* CYRTextStorage.m */; };
+		2A66831C18F52350000645BF /* CYRTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34718D1A0BC0084B5F9 /* CYRTextView.m */; };
+		2A66831D18F52350000645BF /* CYRToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B34918D1A0BC0084B5F9 /* CYRToken.m */; };
+		2A66831E18F52350000645BF /* SKMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3369A318D9F7190012E4F3 /* SKMainViewController.m */; };
+		2A66831F18F52350000645BF /* SKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3369A618D9F7330012E4F3 /* SKViewController.m */; };
+		2A66832018F52350000645BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B2E918D17ECE0084B5F9 /* main.m */; };
+		2A66832118F52363000645BF /* DKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12B2ED18D17ECE0084B5F9 /* DKAppDelegate.m */; };
+		2A66832618F5285F000645BF /* DurexKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A66830C18F522EA000645BF /* DurexKit.h */; };
+		2A66832718F5285F000645BF /* SafeKitCore.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A1D353918D3FD300096274C /* SafeKitCore.h */; };
+		2A66832818F5285F000645BF /* NSException+SafeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A1D353018D3FD0D0096274C /* NSException+SafeKit.h */; };
+		2A66832918F5285F000645BF /* NSObject+Swizzle.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A1D353218D3FD0D0096274C /* NSObject+Swizzle.h */; };
+		2A66832A18F5285F000645BF /* SafeKitLog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A1D353418D3FD0D0096274C /* SafeKitLog.h */; };
+		2A66832B18F5285F000645BF /* SafeKitConfig.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A33699F18D9F4760012E4F3 /* SafeKitConfig.h */; };
+		2A66832C18F5285F000645BF /* SafeKitMacro.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A40E88F18E007330044D348 /* SafeKitMacro.h */; };
+		2A66832D18F5285F000645BF /* Foundation+SafeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A12B31B18D17F250084B5F9 /* Foundation+SafeKit.h */; };
+		2A66832E18F5285F000645BF /* NSObject+SafeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A12B31E18D17F250084B5F9 /* NSObject+SafeKit.h */; };
+		2A66832F18F5285F000645BF /* NSArray+SafeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A12B31C18D17F250084B5F9 /* NSArray+SafeKit.h */; };
+		2A66833018F5285F000645BF /* NSMutableArray+SafeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A12B32F18D184BD0084B5F9 /* NSMutableArray+SafeKit.h */; };
+		2A66833118F5285F000645BF /* NSDictionary+SafeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A12B33218D1896F0084B5F9 /* NSDictionary+SafeKit.h */; };
+		2A66833218F5285F000645BF /* NSMutableDictionary+SafeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A12B33518D189DA0084B5F9 /* NSMutableDictionary+SafeKit.h */; };
+		2A66833318F5285F000645BF /* NSString+SafeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A1D353A18D401F00096274C /* NSString+SafeKit.h */; };
+		2A66833418F5285F000645BF /* NSMutableString+SafeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A1D353D18D402C50096274C /* NSMutableString+SafeKit.h */; };
+		2A66833718F52B02000645BF /* libDurexKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6682E718F521A6000645BF /* libDurexKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +73,48 @@
 			remoteGlobalIDString = 2A12B2D918D17ECE0084B5F9;
 			remoteInfo = DurexKitExample;
 		};
+		2A6682F818F521A6000645BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A12B2D218D17ECE0084B5F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A6682E618F521A6000645BF;
+			remoteInfo = DurexKit;
+		};
+		2A66832218F52368000645BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A12B2D218D17ECE0084B5F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A6682E618F521A6000645BF;
+			remoteInfo = DurexKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2A6682E518F521A6000645BF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				2A66832618F5285F000645BF /* DurexKit.h in CopyFiles */,
+				2A66832718F5285F000645BF /* SafeKitCore.h in CopyFiles */,
+				2A66832818F5285F000645BF /* NSException+SafeKit.h in CopyFiles */,
+				2A66832918F5285F000645BF /* NSObject+Swizzle.h in CopyFiles */,
+				2A66832A18F5285F000645BF /* SafeKitLog.h in CopyFiles */,
+				2A66832B18F5285F000645BF /* SafeKitConfig.h in CopyFiles */,
+				2A66832C18F5285F000645BF /* SafeKitMacro.h in CopyFiles */,
+				2A66832D18F5285F000645BF /* Foundation+SafeKit.h in CopyFiles */,
+				2A66832E18F5285F000645BF /* NSObject+SafeKit.h in CopyFiles */,
+				2A66832F18F5285F000645BF /* NSArray+SafeKit.h in CopyFiles */,
+				2A66833018F5285F000645BF /* NSMutableArray+SafeKit.h in CopyFiles */,
+				2A66833118F5285F000645BF /* NSDictionary+SafeKit.h in CopyFiles */,
+				2A66833218F5285F000645BF /* NSMutableDictionary+SafeKit.h in CopyFiles */,
+				2A66833318F5285F000645BF /* NSString+SafeKit.h in CopyFiles */,
+				2A66833418F5285F000645BF /* NSMutableString+SafeKit.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2A12B2DA18D17ECE0084B5F9 /* DurexKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DurexKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +138,6 @@
 		2A12B31D18D17F250084B5F9 /* NSArray+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeKit.m"; sourceTree = "<group>"; };
 		2A12B31E18D17F250084B5F9 /* NSObject+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SafeKit.h"; sourceTree = "<group>"; };
 		2A12B31F18D17F250084B5F9 /* NSObject+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SafeKit.m"; sourceTree = "<group>"; };
-		2A12B32618D17F6F0084B5F9 /* DurexKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DurexKit.h; sourceTree = "<group>"; };
 		2A12B32F18D184BD0084B5F9 /* NSMutableArray+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeKit.h"; sourceTree = "<group>"; };
 		2A12B33018D184BD0084B5F9 /* NSMutableArray+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafeKit.m"; sourceTree = "<group>"; };
 		2A12B33218D1896F0084B5F9 /* NSDictionary+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeKit.h"; sourceTree = "<group>"; };
@@ -112,6 +175,13 @@
 		2A3369A618D9F7330012E4F3 /* SKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKViewController.m; sourceTree = "<group>"; };
 		2A40E88F18E007330044D348 /* SafeKitMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafeKitMacro.h; sourceTree = "<group>"; };
 		2A40E89018E008020044D348 /* SafeKitMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafeKitMacro.m; sourceTree = "<group>"; };
+		2A6682E718F521A6000645BF /* libDurexKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDurexKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A6682F418F521A6000645BF /* DurexKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DurexKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A6682FD18F521A6000645BF /* DurexKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DurexKitTests-Info.plist"; sourceTree = "<group>"; };
+		2A6682FF18F521A6000645BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2A66830118F521A6000645BF /* DurexKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DurexKitTests.m; sourceTree = "<group>"; };
+		2A66830A18F52217000645BF /* DurexKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DurexKit-Prefix.pch"; sourceTree = "<group>"; };
+		2A66830C18F522EA000645BF /* DurexKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DurexKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A66833718F52B02000645BF /* libDurexKit.a in Frameworks */,
 				2A12B2E018D17ECE0084B5F9 /* CoreGraphics.framework in Frameworks */,
 				2A12B2E218D17ECE0084B5F9 /* UIKit.framework in Frameworks */,
 				2A12B2DE18D17ECE0084B5F9 /* Foundation.framework in Frameworks */,
@@ -135,16 +206,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2A6682E418F521A6000645BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A6682E818F521A6000645BF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A6682F118F521A6000645BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A6682F518F521A6000645BF /* XCTest.framework in Frameworks */,
+				2A6682F718F521A6000645BF /* UIKit.framework in Frameworks */,
+				2A6682F618F521A6000645BF /* Foundation.framework in Frameworks */,
+				2A6682FA18F521A6000645BF /* libDurexKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		2A12B2D118D17ECE0084B5F9 = {
 			isa = PBXGroup;
 			children = (
+				2A66830918F52217000645BF /* DurexKitLib */,
 				2A12B33C18D19E6A0084B5F9 /* Resource */,
 				2A12B31918D17F250084B5F9 /* DurexKit */,
 				2A12B2E318D17ECE0084B5F9 /* DurexKitExample */,
 				2A12B2FC18D17ECE0084B5F9 /* DurexKitExampleTests */,
+				2A6682FB18F521A6000645BF /* DurexKitTests */,
 				2A12B2DC18D17ECE0084B5F9 /* Frameworks */,
 				2A12B2DB18D17ECE0084B5F9 /* Products */,
 			);
@@ -155,6 +247,8 @@
 			children = (
 				2A12B2DA18D17ECE0084B5F9 /* DurexKitExample.app */,
 				2A12B2F518D17ECE0084B5F9 /* DurexKitExampleTests.xctest */,
+				2A6682E718F521A6000645BF /* libDurexKit.a */,
+				2A6682F418F521A6000645BF /* DurexKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,7 +309,7 @@
 		2A12B31918D17F250084B5F9 /* DurexKit */ = {
 			isa = PBXGroup;
 			children = (
-				2A12B32618D17F6F0084B5F9 /* DurexKit.h */,
+				2A66830C18F522EA000645BF /* DurexKit.h */,
 				2A1D352F18D3FD0D0096274C /* SafeCore */,
 				2A12B31A18D17F250084B5F9 /* Foundation */,
 			);
@@ -299,6 +393,32 @@
 			path = SafeCore;
 			sourceTree = "<group>";
 		};
+		2A6682FB18F521A6000645BF /* DurexKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A66830118F521A6000645BF /* DurexKitTests.m */,
+				2A6682FC18F521A6000645BF /* Supporting Files */,
+			);
+			path = DurexKitTests;
+			sourceTree = "<group>";
+		};
+		2A6682FC18F521A6000645BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A6682FD18F521A6000645BF /* DurexKitTests-Info.plist */,
+				2A6682FE18F521A6000645BF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A66830918F52217000645BF /* DurexKitLib */ = {
+			isa = PBXGroup;
+			children = (
+				2A66830A18F52217000645BF /* DurexKit-Prefix.pch */,
+			);
+			path = DurexKitLib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -313,6 +433,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2A66832318F52368000645BF /* PBXTargetDependency */,
 			);
 			name = DurexKitExample;
 			productName = DurexKitExample;
@@ -337,6 +458,41 @@
 			productReference = 2A12B2F518D17ECE0084B5F9 /* DurexKitExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		2A6682E618F521A6000645BF /* DurexKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A66830718F521A6000645BF /* Build configuration list for PBXNativeTarget "DurexKit" */;
+			buildPhases = (
+				2A6682E318F521A6000645BF /* Sources */,
+				2A6682E418F521A6000645BF /* Frameworks */,
+				2A6682E518F521A6000645BF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DurexKit;
+			productName = DurexKit;
+			productReference = 2A6682E718F521A6000645BF /* libDurexKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2A6682F318F521A6000645BF /* DurexKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A66830818F521A6000645BF /* Build configuration list for PBXNativeTarget "DurexKitTests" */;
+			buildPhases = (
+				2A6682F018F521A6000645BF /* Sources */,
+				2A6682F118F521A6000645BF /* Frameworks */,
+				2A6682F218F521A6000645BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A6682F918F521A6000645BF /* PBXTargetDependency */,
+			);
+			name = DurexKitTests;
+			productName = DurexKitTests;
+			productReference = 2A6682F418F521A6000645BF /* DurexKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -348,6 +504,9 @@
 				ORGANIZATIONNAME = zhangyu;
 				TargetAttributes = {
 					2A12B2F418D17ECE0084B5F9 = {
+						TestTargetID = 2A12B2D918D17ECE0084B5F9;
+					};
+					2A6682F318F521A6000645BF = {
 						TestTargetID = 2A12B2D918D17ECE0084B5F9;
 					};
 				};
@@ -366,6 +525,8 @@
 			targets = (
 				2A12B2D918D17ECE0084B5F9 /* DurexKitExample */,
 				2A12B2F418D17ECE0084B5F9 /* DurexKitExampleTests */,
+				2A6682E618F521A6000645BF /* DurexKit */,
+				2A6682F318F521A6000645BF /* DurexKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -390,6 +551,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2A6682F218F521A6000645BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A66830018F521A6000645BF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -397,27 +566,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A12B34D18D1A0BC0084B5F9 /* CYRToken.m in Sources */,
-				2A12B34A18D1A0BC0084B5F9 /* CYRLayoutManager.m in Sources */,
-				2A12B35018D1A0C30084B5F9 /* QEDTextView.m in Sources */,
-				2A1D353C18D401F00096274C /* NSString+SafeKit.m in Sources */,
-				2A3369A718D9F7330012E4F3 /* SKViewController.m in Sources */,
-				2A1D353618D3FD0D0096274C /* NSException+SafeKit.m in Sources */,
-				2A12B2EA18D17ECE0084B5F9 /* main.m in Sources */,
-				2A3369A118D9F4760012E4F3 /* SafeKitConfig.m in Sources */,
-				2A1D353F18D402C50096274C /* NSMutableString+SafeKit.m in Sources */,
-				2A12B2EE18D17ECE0084B5F9 /* DKAppDelegate.m in Sources */,
-				2A40E89118E008020044D348 /* SafeKitMacro.m in Sources */,
-				2A12B32318D17F250084B5F9 /* NSArray+SafeKit.m in Sources */,
-				2A1D353718D3FD0D0096274C /* NSObject+Swizzle.m in Sources */,
-				2A12B33718D189DA0084B5F9 /* NSMutableDictionary+SafeKit.m in Sources */,
-				2A12B32418D17F250084B5F9 /* NSObject+SafeKit.m in Sources */,
-				2A12B34B18D1A0BC0084B5F9 /* CYRTextStorage.m in Sources */,
-				2A1D353818D3FD0D0096274C /* SafeKitLog.m in Sources */,
-				2A12B34C18D1A0BC0084B5F9 /* CYRTextView.m in Sources */,
-				2A12B33418D1896F0084B5F9 /* NSDictionary+SafeKit.m in Sources */,
-				2A3369A418D9F7190012E4F3 /* SKMainViewController.m in Sources */,
-				2A12B33118D184BD0084B5F9 /* NSMutableArray+SafeKit.m in Sources */,
+				2A66832118F52363000645BF /* DKAppDelegate.m in Sources */,
+				2A66831918F52350000645BF /* QEDTextView.m in Sources */,
+				2A66831A18F52350000645BF /* CYRLayoutManager.m in Sources */,
+				2A66831B18F52350000645BF /* CYRTextStorage.m in Sources */,
+				2A66831C18F52350000645BF /* CYRTextView.m in Sources */,
+				2A66831D18F52350000645BF /* CYRToken.m in Sources */,
+				2A66831E18F52350000645BF /* SKMainViewController.m in Sources */,
+				2A66831F18F52350000645BF /* SKViewController.m in Sources */,
+				2A66832018F52350000645BF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +586,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2A6682E318F521A6000645BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A66830D18F5231C000645BF /* NSException+SafeKit.m in Sources */,
+				2A66830E18F5231C000645BF /* NSObject+Swizzle.m in Sources */,
+				2A66830F18F5231C000645BF /* SafeKitLog.m in Sources */,
+				2A66831018F5231C000645BF /* SafeKitConfig.m in Sources */,
+				2A66831118F5231C000645BF /* SafeKitMacro.m in Sources */,
+				2A66831218F5231C000645BF /* NSObject+SafeKit.m in Sources */,
+				2A66831318F5231C000645BF /* NSArray+SafeKit.m in Sources */,
+				2A66831418F5231C000645BF /* NSMutableArray+SafeKit.m in Sources */,
+				2A66831518F5231C000645BF /* NSDictionary+SafeKit.m in Sources */,
+				2A66831618F5231C000645BF /* NSMutableDictionary+SafeKit.m in Sources */,
+				2A66831718F5231C000645BF /* NSString+SafeKit.m in Sources */,
+				2A66831818F5231C000645BF /* NSMutableString+SafeKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A6682F018F521A6000645BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A66830218F521A6000645BF /* DurexKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -436,6 +620,16 @@
 			isa = PBXTargetDependency;
 			target = 2A12B2D918D17ECE0084B5F9 /* DurexKitExample */;
 			targetProxy = 2A12B2FA18D17ECE0084B5F9 /* PBXContainerItemProxy */;
+		};
+		2A6682F918F521A6000645BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A6682E618F521A6000645BF /* DurexKit */;
+			targetProxy = 2A6682F818F521A6000645BF /* PBXContainerItemProxy */;
+		};
+		2A66832318F52368000645BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A6682E618F521A6000645BF /* DurexKit */;
+			targetProxy = 2A66832218F52368000645BF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -452,6 +646,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				2A12B30018D17ECE0084B5F9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2A6682FE18F521A6000645BF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A6682FF18F521A6000645BF /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -536,6 +738,7 @@
 		2A12B30718D17ECE0084B5F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -543,7 +746,9 @@
 				GCC_PREFIX_HEADER = "DurexKitExample/DurexKitExample-Prefix.pch";
 				INFOPLIST_FILE = "DurexKitExample/DurexKitExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/DurexKit/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -551,6 +756,7 @@
 		2A12B30818D17ECE0084B5F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -558,7 +764,9 @@
 				GCC_PREFIX_HEADER = "DurexKitExample/DurexKitExample-Prefix.pch";
 				INFOPLIST_FILE = "DurexKitExample/DurexKitExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/DurexKit/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -605,6 +813,82 @@
 			};
 			name = Release;
 		};
+		2A66830318F521A6000645BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DurexKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DurexKitLib/DurexKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2A66830418F521A6000645BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DurexKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DurexKitLib/DurexKit-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2A66830518F521A6000645BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DurexKitExample.app/DurexKitExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DurexKit/DurexKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "DurexKitTests/DurexKitTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2A66830618F521A6000645BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DurexKitExample.app/DurexKitExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DurexKit/DurexKit-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "DurexKitTests/DurexKitTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -634,6 +918,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		2A66830718F521A6000645BF /* Build configuration list for PBXNativeTarget "DurexKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A66830318F521A6000645BF /* Debug */,
+				2A66830418F521A6000645BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2A66830818F521A6000645BF /* Build configuration list for PBXNativeTarget "DurexKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A66830518F521A6000645BF /* Debug */,
+				2A66830618F521A6000645BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

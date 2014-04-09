@@ -109,41 +109,16 @@
 }
 
 -(BOOL)isSelectorReturnType:(SEL)aSelector{
-    Method method = class_getInstanceMethod( [ self class ], aSelector);
-    char ret[128];
-    method_getReturnType(method, ret, 128);
-    
-    char c = ret[0];
-    
-    if (c == '@') {
-        return YES;
-    }else{
-        return NO;
+    NSMethodSignature *signature = [self methodSignatureForSelector:aSelector];
+    if (signature) {
+        const char *returnType = signature.methodReturnType;
+        if (!strcmp(returnType, @encode(void))){
+            return NO;
+        }else{
+            return YES;
+        }
     }
-    
-//    if (c == 'v') {//void
-//        return NO;
-//    }else if (c == 'c') {//char
-//        return NO;
-//    }else if (c == 'i') {//int UInteger
-//        return NO;
-//    }else if (c == 'd') {//double
-//        return NO;
-//    }else if (c == 'l') {//long
-//        return NO;
-//    }else if (c == 's') {//short
-//        return NO;
-//    }else if (c == 'f') {//float
-//        return NO;
-//    }else if (c == '*') {//char *
-//        return NO;
-//    }else if (c == '^') {//char **
-//        return NO;
-//    }else if (c == 'I') {//unsigned
-//        return NO;
-//    }else{
-//        return YES;
-//    }
+    return NO;
 }
 
 + (void) load{
@@ -257,5 +232,3 @@
 //
 //}
 @end
-
-

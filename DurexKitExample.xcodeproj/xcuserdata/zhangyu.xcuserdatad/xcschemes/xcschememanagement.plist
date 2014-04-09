@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DurexKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>DurexKitExample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>2A12B2F418D17ECE0084B5F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2A6682E618F521A6000645BF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2A6682F318F521A6000645BF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

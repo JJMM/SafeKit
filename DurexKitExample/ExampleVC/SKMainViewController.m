@@ -10,7 +10,6 @@
 
 #import "DurexKit.h"
 #import "QEDTextView.h"
-#import <objc/runtime.h>
 
 @interface SKMainViewController () <UITextViewDelegate>
 
