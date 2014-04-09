@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5D0AEF72-C1B1-400B-8E8A-D9A3A94BB55B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DurexKit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>94C34E91-4178-4012-B0C0-C5C04CA3732E</key>
+		<string>https://github.com/JJMM/DurexKit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DurexKit.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>94C34E91-4178-4012-B0C0-C5C04CA3732E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JJMM/DurexKit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>94C34E91-4178-4012-B0C0-C5C04CA3732E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>94C34E91-4178-4012-B0C0-C5C04CA3732E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DurexKit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
