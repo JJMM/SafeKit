@@ -7,11 +7,11 @@ It’s very easy to use without modifying any code.<br>
 - 2.Drag and drop the DurexKitExample.xcodeproj file downloaded from github previously from Finder to your project (either root or under Frameworks)
 
 - 3.In YOUR project configuration:
-—- in the Build Phases, Add DurexKit (the lib, not the example app) as a Target Dependency
-—- in the Link Binary With Libraries section, add the libDurexKit.a library
+in the Build Phases, Add DurexKit (the lib, not the example app) as a Target Dependency
+in the Link Binary With Libraries section, add the libDurexKit.a library
 - 4.In YOUR Prefix.pch file, add:
 
-\#import <DurexKit/DurexKit.h>
+\#import \<DurexKit/DurexKit.h\>
 
 - 5.In YOUR project configuration, on the “Build Settings” tab
 
