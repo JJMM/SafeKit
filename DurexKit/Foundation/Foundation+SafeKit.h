@@ -16,3 +16,5 @@
 
 #import "NSString+SafeKit.h"
 #import "NSMutableString+SafeKit.h"
+
+#import "NSNumber+SafeKit.h"

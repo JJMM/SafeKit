@@ -63,6 +63,7 @@
 		2A66833318F5285F000645BF /* NSString+SafeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A1D353A18D401F00096274C /* NSString+SafeKit.h */; };
 		2A66833418F5285F000645BF /* NSMutableString+SafeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A1D353D18D402C50096274C /* NSMutableString+SafeKit.h */; };
 		2A66833718F52B02000645BF /* libDurexKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6682E718F521A6000645BF /* libDurexKit.a */; };
+		2A8E0E9B1949B0E700B45BDD /* NSNumber+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8E0E9A1949B0E700B45BDD /* NSNumber+SafeKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +183,8 @@
 		2A66830118F521A6000645BF /* DurexKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DurexKitTests.m; sourceTree = "<group>"; };
 		2A66830A18F52217000645BF /* DurexKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DurexKit-Prefix.pch"; sourceTree = "<group>"; };
 		2A66830C18F522EA000645BF /* DurexKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DurexKit.h; sourceTree = "<group>"; };
+		2A8E0E991949B0E700B45BDD /* NSNumber+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+SafeKit.h"; sourceTree = "<group>"; };
+		2A8E0E9A1949B0E700B45BDD /* NSNumber+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+SafeKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +322,8 @@
 		2A12B31A18D17F250084B5F9 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				2A8E0E991949B0E700B45BDD /* NSNumber+SafeKit.h */,
+				2A8E0E9A1949B0E700B45BDD /* NSNumber+SafeKit.m */,
 				2A12B31B18D17F250084B5F9 /* Foundation+SafeKit.h */,
 				2A12B31E18D17F250084B5F9 /* NSObject+SafeKit.h */,
 				2A12B31F18D17F250084B5F9 /* NSObject+SafeKit.m */,
@@ -590,6 +595,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A8E0E9B1949B0E700B45BDD /* NSNumber+SafeKit.m in Sources */,
 				2A66830D18F5231C000645BF /* NSException+SafeKit.m in Sources */,
 				2A66830E18F5231C000645BF /* NSObject+Swizzle.m in Sources */,
 				2A66830F18F5231C000645BF /* SafeKitLog.m in Sources */,
@@ -748,7 +754,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/DurexKit/**";
+				USER_HEADER_SEARCH_PATHS = "$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -766,7 +772,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/DurexKit/**";
+				USER_HEADER_SEARCH_PATHS = "$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
