@@ -24,7 +24,7 @@ in the Link Binary With Libraries section, add the libDurexKit.a library<br>
 ### Use source directly
 
 1. Copy the folder named DurexKit to your project
-2. in the Compile Sources section, find the NSException+SafeKit.m,and add the value -fno-objc-arc
+2. in the Compile Sources section, find the NSException+SafeKit.m, and add the value -fno-objc-arc
 
 We do not recommend using like this.
 
