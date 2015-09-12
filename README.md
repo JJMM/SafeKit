@@ -22,11 +22,13 @@ in the Link Binary With Libraries section, add the libDurexKit.a library<br>
 - Finally, find the “Other Linker Flags” option, and add the value -ObjC (no quotes).
 
 ### Use source directly
-1.Copy the folder named DurexKit to your project
-2.in the Compile Sources section, find the NSException+SafeKit.m,and add the value -fno-objc-arc
+
+1. Copy the folder named DurexKit to your project
+2. in the Compile Sources section, find the NSException+SafeKit.m, and add the value -fno-objc-arc
+
 We do not recommend using like this.
 
-## exchange the method in NSArray,NSDictionary…
+## Exchange the method in NSArray,NSDictionary…
 ```objective-c
 + (void) load{
     [self swizzleMethod:@selector(SKobjectAtIndex:) targetClass:@"__NSArrayI" target:@selector(objectAtIndex:)];
