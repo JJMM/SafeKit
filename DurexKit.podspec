@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.subspec 'Foundation' do |ss|
-    ss.dependency 'CUSLayout/SafeCore'
+    ss.dependency 'DurexKit/SafeCore'
     ss.source_files = 'DurexKit/Foundation/*'
   end
   
