@@ -12,21 +12,21 @@
 
 @implementation NSObject(Swizzle)
 
-+(void)swizzleMethod:(SEL)srcSel tarSel:(SEL)tarSel{
++ (void)safe_swizzleMethod:(SEL)srcSel tarSel:(SEL)tarSel{
     Class clazz = [self class];
-    [self swizzleMethod:clazz srcSel:srcSel tarClass:clazz tarSel:tarSel];
+    [self safe_swizzleMethod:clazz srcSel:srcSel tarClass:clazz tarSel:tarSel];
 }
 
-+(void)swizzleMethod:(SEL)srcSel tarClass:(NSString *)tarClassName tarSel:(SEL)tarSel{
++ (void)safe_swizzleMethod:(SEL)srcSel tarClass:(NSString *)tarClassName tarSel:(SEL)tarSel{
     if (!tarClassName) {
         return;
     }
     Class srcClass = [self class];
     Class tarClass = NSClassFromString(tarClassName);
-    [self swizzleMethod:srcClass srcSel:srcSel tarClass:tarClass tarSel:tarSel];
+    [self safe_swizzleMethod:srcClass srcSel:srcSel tarClass:tarClass tarSel:tarSel];
 }
 
-+(void)swizzleMethod:(Class)srcClass srcSel:(SEL)srcSel tarClass:(Class)tarClass tarSel:(SEL)tarSel{
++ (void)safe_swizzleMethod:(Class)srcClass srcSel:(SEL)srcSel tarClass:(Class)tarClass tarSel:(SEL)tarSel{
     if (!srcClass) {
         return;
     }
