@@ -8,36 +8,32 @@
 
 #import "NSMutableDictionary+SafeKit.h"
 #import "NSObject+swizzle.h"
-#import "SafeKitLog.h"
-#import "NSException+SafeKit.h"
 
 @implementation NSMutableDictionary(SafeKit)
 
-- (void)SKremoveObjectForKey:(id)aKey{
+- (void)safe_removeObjectForKey:(id)aKey {
     if (!aKey) {
-        [[SafeKitLog shareInstance]logWarning:@"key is nil"];
         return;
     }
-    [self SKremoveObjectForKey:aKey];
+    [self safe_removeObjectForKey:aKey];
 }
 
-- (void)SKsetObject:(id)anObject forKey:(id <NSCopying>)aKey{
+- (void)safe_setObject:(id)anObject forKey:(id <NSCopying>)aKey {
     if (!anObject) {
-        [[SafeKitLog shareInstance]logWarning:@"object is nil"];
         return;
     }
     if (!aKey) {
-        [[SafeKitLog shareInstance]logWarning:@"key is nil"];
         return;
     }
-    [self SKsetObject:anObject forKey:aKey];
+    [self safe_setObject:anObject forKey:aKey];
 }
 
-+ (void) load{
++ (void) load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [self swizzleMethod:@selector(SKremoveObjectForKey:) tarClass:@"__NSDictionaryM" tarSel:@selector(removeObjectForKey:)];
-        [self swizzleMethod:@selector(SKsetObject:forKey:) tarClass:@"__NSDictionaryM" tarSel:@selector(setObject:forKey:)];
+        [self swizzleMethod:@selector(safe_removeObjectForKey:) tarClass:@"__NSDictionaryM" tarSel:@selector(removeObjectForKey:)];
+        [self swizzleMethod:@selector(safe_setObject:forKey:) tarClass:@"__NSDictionaryM" tarSel:@selector(setObject:forKey:)];
     });
 }
+
 @end

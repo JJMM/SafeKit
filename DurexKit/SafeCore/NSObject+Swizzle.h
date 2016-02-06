@@ -36,4 +36,5 @@
  * @param tarSel target selector
  */
 +(void)swizzleMethod:(Class)srcClass srcSel:(SEL)srcSel tarClass:(Class)tarClass tarSel:(SEL)tarSel;
+
 @end

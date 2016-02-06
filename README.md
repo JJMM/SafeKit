@@ -3,30 +3,17 @@ It’s very easy to use without modifying any code.<br>
 ![image](https://github.com/JJMM/CUSResources/raw/master/DurexKitIntr.jpg)
 
 ## How To Get Started
-###Use static library
-- 1.Open your existing project (or create a new one)
-- 2.Drag and drop the DurexKitExample.xcodeproj file downloaded from github previously from Finder to your project (either root or under Frameworks)
+### Installation with CocoaPods
 
-- 3.In YOUR project configuration:<br>
-in the Build Phases, Add DurexKit (the lib, not the example app) as a Target Dependency<br>
-in the Link Binary With Libraries section, add the libDurexKit.a library<br>
-- 4.In YOUR Prefix.pch file, add:
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like CUSLayout in your projects. See the ["Getting Started" guide for more information](https://github.com/JJMM/CUSLayout/wiki/Getting-Started-with-CUSLayout).
 
-    \#import \<DurexKit/DurexKit.h\>
+#### Podfile
 
-- 5.In YOUR project configuration, on the “Build Settings” tab
-
-- locate the “User Header Search Paths” setting, and set the Release value to "${PROJECT_DIR}/DurexKit" (including quotes!) and check the “Recursive” check box.
-- The Debug value should already be set, but if it’s not, change that as well.
-- Also locate the “Always Search User Paths” value and set it to YES.
-- Finally, find the “Other Linker Flags” option, and add the value -ObjC (no quotes).
-
-### Use source directly
-
-1. Copy the folder named DurexKit to your project
-2. in the Compile Sources section, find the NSException+SafeKit.m, and add the value -fno-objc-arc
-
-We do not recommend using like this.
+```ruby
+platform:ios<br>
+pod "DurexKit"
+```
+------------------------------------
 
 ## Exchange the method in NSArray,NSDictionary…
 ```objective-c

@@ -8,22 +8,29 @@
 
 #import "NSArray+SafeKit.h"
 #import "NSObject+swizzle.h"
-#import "SafeKitLog.h"
-#import "NSException+SafeKit.h"
 
 @implementation NSArray(SafeKit)
--(id)SKobjectAtIndex:(NSUInteger)index{
+
+- (id)safe_objectAtIndex:(NSUInteger)index {
     if (index >= [self count]) {
-        [[SafeKitLog shareInstance]logWarning:[NSString stringWithFormat:@"index[%ld] >= count[%ld]",(long)index ,(long)[self count]]];
         return nil;
     }
-    return [self SKobjectAtIndex:index];
+    return [self safe_objectAtIndex:index];
 }
 
-+ (void) load{
+- (NSArray *)safe_arrayByAddingObject:(id)anObject {
+    if (!anObject) {
+        return self;
+    }
+    return [self safe_arrayByAddingObject:anObject];
+}
+
++ (void)load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [self swizzleMethod:@selector(SKobjectAtIndex:) tarClass:@"__NSArrayI" tarSel:@selector(objectAtIndex:)];
+        [self swizzleMethod:@selector(safe_objectAtIndex:) tarClass:@"__NSArrayI" tarSel:@selector(objectAtIndex:)];
+        [self swizzleMethod:@selector(safe_arrayByAddingObject:) tarClass:@"__NSArrayI" tarSel:@selector(arrayByAddingObject:)];
     });
 }
+
 @end

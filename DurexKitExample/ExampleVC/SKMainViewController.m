@@ -24,8 +24,6 @@
     self = [super init];
     if (self) {
         self.title = @"DurexKit";
-        //    setSafeKitLogType(SafeKitLogTypeNone);
-        setSafeKitLogType(SafeKitLogTypeInfo | SafeKitLogTypeWarning | SafeKitLogTypeError);
     }
     return self;
 }
@@ -74,21 +72,6 @@
     @"[dictionary setObject:nil forKey:nil];\n"\
     @"[dictionary removeObjectForKey:nil];\n"\
     @"// No.It is as safe as Durex.\n";
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    button.frame = CGRectMake(50, self.view.frame.size.height - 130, 210, 30);
-    [button setTitle:@"no selector button" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(noneSelector:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-}
-
-
--(void)buttonClicked:(id)sender{
-    setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOn);//no crash
-    //    setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOff);//crash
-//    NSException *e = [NSException exceptionWithName:@"TestException" reason:@"Test" userInfo:nil];
-//    @throw e;
-//    return [NSNumber numberWithInt:1];
 }
 
 @end

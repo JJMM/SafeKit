@@ -8,8 +8,7 @@
 
 #import "NSObject+Swizzle.h"
 #import <objc/runtime.h>
-#import "NSException+SafeKit.h"
-#import "SafeKitConfig.h"
+#import "SafeKitMacro.h"
 
 @implementation NSObject(Swizzle)
 
@@ -17,6 +16,7 @@
     Class clazz = [self class];
     [self swizzleMethod:clazz srcSel:srcSel tarClass:clazz tarSel:tarSel];
 }
+
 +(void)swizzleMethod:(SEL)srcSel tarClass:(NSString *)tarClassName tarSel:(SEL)tarSel{
     if (!tarClassName) {
         return;
@@ -39,10 +39,9 @@
     if (!tarSel) {
         return;
     }
-    SK_TRY_BODY(
-                Method srcMethod = class_getInstanceMethod(srcClass,srcSel);
-                Method tarMethod = class_getInstanceMethod(tarClass,tarSel);
-                method_exchangeImplementations(srcMethod, tarMethod);)
+    Method srcMethod = class_getInstanceMethod(srcClass,srcSel);
+    Method tarMethod = class_getInstanceMethod(tarClass,tarSel);
+    method_exchangeImplementations(srcMethod, tarMethod);
 }
 
 @end

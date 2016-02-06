@@ -8,22 +8,29 @@
 
 #import "NSNumber+SafeKit.h"
 #import "NSObject+swizzle.h"
-#import "SafeKitLog.h"
-#import "NSException+SafeKit.h"
 
 @implementation NSNumber(SafeKit)
-- (BOOL)SKisEqualToNumber:(NSNumber *)number{
+
+- (BOOL)safe_isEqualToNumber:(NSNumber *)number {
     if (!number) {
-        [[SafeKitLog shareInstance]logWarning:@"number is nil"];
         return NO;
     }
-    return [self SKisEqualToNumber:number];
+    return [self safe_isEqualToNumber:number];
 }
 
-+ (void) load{
+- (NSComparisonResult)safe_compare:(NSNumber *)number {
+    if (!number) {
+        return NSOrderedAscending;
+    }
+    return [self safe_compare:number];
+}
+
++ (void)load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [self swizzleMethod:@selector(SKisEqualToNumber:) tarClass:@"__NSCFNumber" tarSel:@selector(isEqualToNumber:)];
+        [self swizzleMethod:@selector(safe_isEqualToNumber:) tarClass:@"__NSCFNumber" tarSel:@selector(isEqualToNumber:)];
+        [self swizzleMethod:@selector(safe_compare:) tarClass:@"__NSCFNumber" tarSel:@selector(compare:)];
     });
 }
+
 @end
