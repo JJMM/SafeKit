@@ -16,7 +16,6 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'SafeCore' do |ss|
-    ss.dependency 'DurexKit/SafeCore'
     ss.source_files = 'DurexKit/SafeCore/*'
   end
 end
