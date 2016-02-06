@@ -6,8 +6,17 @@ Pod::Spec.new do |s|
   s.license      = "Apache License, Version 2.0"
   s.authors      = { "JJMM" => "iosdes@163.com" }
   s.source       = { :git => "https://github.com/JJMM/DurexKit.git", :tag => "#{s.version}" }
+  s.frameworks   = 'Foundation'
   s.platform     = :ios
   s.source_files = 'DurexKit/*'
   s.requires_arc = true
+
+  s.subspec 'Foundation' do |ss|
+    ss.source_files = 'DurexKit/Foundation/*'
+  end
+  
+  s.subspec 'SafeCore' do |ss|
+    ss.source_files = 'DurexKit/SafeCore/*'
+  end
 end
 
