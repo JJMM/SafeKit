@@ -19,7 +19,7 @@
 }
 
 - (NSString *)safe_substringWithRange:(NSRange)range {
-    if (range.location + range.length >= self.length) {
+    if (range.location + range.length > self.length) {
         return @"";
     }
     return [self safe_substringWithRange:range];
