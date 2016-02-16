@@ -1,4 +1,4 @@
-DurexKit could greatly reduce the probability of crash.<br>
+SafeKit could greatly reduce the probability of crash.<br>
 It’s very easy to use without modifying any code.<br>
 ![image](https://github.com/JJMM/CUSResources/raw/master/DurexKitIntr.jpg)
 
@@ -9,59 +9,60 @@ It’s very easy to use without modifying any code.<br>
 
 #### Podfile
 
-```ruby
-platform:ios<br>
-pod "DurexKit"
+```
+pod "SafeKit"
 ```
 ------------------------------------
 
 ## Exchange the method in NSArray,NSDictionary…
-```objective-c
+```
+
 + (void) load{
-    [self swizzleMethod:@selector(SKobjectAtIndex:) targetClass:@"__NSArrayI" target:@selector(objectAtIndex:)];
-    [self swizzleMethod:@selector(SKarrayByAddingObject:) targetClass:@"__NSArrayI" target:@selector(arrayByAddingObject:)];
+    [self safe_swizzleMethod:@selector(safe_objectAtIndex:) tarClass:@"__NSArrayI" tarSel:@selector(objectAtIndex:)];
+        [self safe_swizzleMethod:@selector(safe_arrayByAddingObject:) tarClass:@"__NSArrayI" tarSel:@selector(arrayByAddingObject:)];
 }
 
 ```
 
-## Log
-```objective-c
-#define SafeKitLogTypeNone 0
-#define SafeKitLogTypeInfo 1
-#define SafeKitLogTypeWarning 2
-#define SafeKitLogTypeError 4
-
-setSafeKitLogType(SafeKitLogTypeNone);
-setSafeKitLogType(SafeKitLogTypeInfo | SafeKitLogTypeWarning | SafeKitLogTypeError);
-
-[[SafeKitLog shareInstance]log:@“info“];
+## Unit Test
 ```
-The method will invoke NSLog to print  “info” on console.Also,you could use yourself way to record log.You just need to implement the interface of ”SafeKitPrinter”.
+@interface NSArrayTests : XCTestCase
 
-This is default implementation.
-```objective-c
-@interface SafeKitConsolePrinter : SafeKitPrinter
+@property (strong, nonatomic) NSArray *array;
 
 @end
 
-[[SafeKitLog shareInstance]setPrinter:printer];
+@implementation NSArrayTests
+
+- (void)setUp {
+    [super setUp];
+    self.array = @[@"0", @"1", @"2"];
+}
+
+- (void)tearDown {
+    [super tearDown];
+}
+
+- (void)testObjectAtIndex {
+    id value = [self.array objectAtIndex:10];
+    XCTAssert(value == nil);
+    value = self.array[10];
+    XCTAssert(value == nil);
+}
+
+- (void)testArrayByAddingObject {
+    id value = nil;
+    [self.array arrayByAddingObject:value];
+}
+
+@end
+
 ```
-
-## Method perform
-```objective-c
-typedef enum{
-    SafeKitObjectPerformExceptionCatchOn,//default
-    SafeKitObjectPerformExceptionCatchOff
-} SafeKitObjectPerformExceptionCatch;
-
-setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOn);
-setSafeKitObjectPerformExceptionCatch(SafeKitObjectPerformExceptionCatchOff);
-
-```
+Test success!
 
 ## License
 
-DurexKit is licensed under the terms of the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html). Please see the [LICENSE](LICENSE) file for full details.
+SafeKit is licensed under the terms of the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html). Please see the [LICENSE](LICENSE) file for full details.
 
 ## Contributions
 
