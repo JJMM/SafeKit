@@ -1,6 +1,6 @@
 Pod::Spec.new do |s| 
   s.name         = "SafeKit"
-  s.version      = "1.4.0"
+  s.version      = "1.4.1"
   s.summary      = "iOS safe kit.Never crash"
   s.homepage     = "https://github.com/JJMM/SafeKit"
   s.license      = "Apache License, Version 2.0"
