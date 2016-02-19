@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSMutableString(SafeKit)
+@interface NSMutableString (SafeKit)
 
 @end
 

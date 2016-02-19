@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSMutableDictionary(SafeKit)
+@interface NSMutableDictionary (SafeKit)
 
 @end
 

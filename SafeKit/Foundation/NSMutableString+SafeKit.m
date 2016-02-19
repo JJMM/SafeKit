@@ -10,7 +10,7 @@
 #import "NSObject+swizzle.h"
 #import "SafeKitMacro.h"
 
-@implementation NSMutableString(SafeKit)
+@implementation NSMutableString (SafeKit)
 
 - (void)safe_appendString:(NSString *)aString {
     if (!aString) {

@@ -9,7 +9,19 @@
 #import "NSArray+SafeKit.h"
 #import "NSObject+swizzle.h"
 
-@implementation NSArray(SafeKit)
+@implementation NSArray (SafeKit)
+
+- (instancetype)initWithObjects_safe:(const id  _Nonnull __unsafe_unretained *)objects count:(NSUInteger)cnt {
+    NSUInteger newCnt = 0;
+    for (NSUInteger i = 0; i < cnt; i++) {
+        if (!objects[i]) {
+            break;
+        }
+        newCnt++;
+    }
+    self = [self initWithObjects_safe:objects count:newCnt];
+    return self;
+}
 
 - (id)safe_objectAtIndex:(NSUInteger)index {
     if (index >= [self count]) {
@@ -25,9 +37,10 @@
     return [self safe_arrayByAddingObject:anObject];
 }
 
-+ (void)load{
++ (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        [self safe_swizzleMethod:@selector(initWithObjects_safe:count:) tarClass:@"__NSPlaceholderArray" tarSel:@selector(initWithObjects:count:)]; // for literals
         [self safe_swizzleMethod:@selector(safe_objectAtIndex:) tarClass:@"__NSArrayI" tarSel:@selector(objectAtIndex:)];
         [self safe_swizzleMethod:@selector(safe_arrayByAddingObject:) tarClass:@"__NSArrayI" tarSel:@selector(arrayByAddingObject:)];
     });

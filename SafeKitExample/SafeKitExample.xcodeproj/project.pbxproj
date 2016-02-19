@@ -25,6 +25,8 @@
 		2A15B2FE1C73014F002A0019 /* NSString+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A15B2F21C73014F002A0019 /* NSString+SafeKit.m */; };
 		2A15B2FF1C73014F002A0019 /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A15B2F51C73014F002A0019 /* NSObject+Swizzle.m */; };
 		2A15B3021C730162002A0019 /* libSafeKitLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A15B2DB1C73010A002A0019 /* libSafeKitLib.a */; };
+		2A15B3051C770A1A002A0019 /* NSDictionary+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A15B3041C770A1A002A0019 /* NSDictionary+SafeKit.m */; };
+		2A15B3071C770DEF002A0019 /* NSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A15B3061C770DEF002A0019 /* NSDictionaryTests.m */; };
 		2A6892501C72FC4600452E1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A68924F1C72FC4600452E1D /* main.m */; };
 		2A6892531C72FC4600452E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6892521C72FC4600452E1D /* AppDelegate.m */; };
 		2A6892591C72FC4600452E1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6892571C72FC4600452E1D /* Main.storyboard */; };
@@ -108,6 +110,9 @@
 		2A15B2F61C73014F002A0019 /* SafeKitCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeKitCore.h; sourceTree = "<group>"; };
 		2A15B2F71C73014F002A0019 /* SafeKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeKitMacro.h; sourceTree = "<group>"; };
 		2A15B2F81C73014F002A0019 /* SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeKit.h; sourceTree = "<group>"; };
+		2A15B3031C770A1A002A0019 /* NSDictionary+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeKit.h"; sourceTree = "<group>"; };
+		2A15B3041C770A1A002A0019 /* NSDictionary+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeKit.m"; sourceTree = "<group>"; };
+		2A15B3061C770DEF002A0019 /* NSDictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryTests.m; sourceTree = "<group>"; };
 		2A68924B1C72FC4600452E1D /* SafeKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A68924F1C72FC4600452E1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2A6892511C72FC4600452E1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -207,6 +212,8 @@
 				2A15B2F01C73014F002A0019 /* NSNumber+SafeKit.m */,
 				2A15B2F11C73014F002A0019 /* NSString+SafeKit.h */,
 				2A15B2F21C73014F002A0019 /* NSString+SafeKit.m */,
+				2A15B3031C770A1A002A0019 /* NSDictionary+SafeKit.h */,
+				2A15B3041C770A1A002A0019 /* NSDictionary+SafeKit.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -281,6 +288,7 @@
 				2A15B2CB1C730050002A0019 /* NSNumberTests.m */,
 				2A15B2CC1C730050002A0019 /* NSStringTests.m */,
 				2A6892681C72FC4600452E1D /* SafeKitExampleTests.m */,
+				2A15B3061C770DEF002A0019 /* NSDictionaryTests.m */,
 				2A68926A1C72FC4600452E1D /* Info.plist */,
 			);
 			path = SafeKitExampleTests;
@@ -483,6 +491,7 @@
 				2A15B2FE1C73014F002A0019 /* NSString+SafeKit.m in Sources */,
 				2A15B2E01C73010A002A0019 /* SafeKitLib.m in Sources */,
 				2A15B2FD1C73014F002A0019 /* NSNumber+SafeKit.m in Sources */,
+				2A15B3051C770A1A002A0019 /* NSDictionary+SafeKit.m in Sources */,
 				2A15B2FB1C73014F002A0019 /* NSMutableDictionary+SafeKit.m in Sources */,
 				2A15B2FC1C73014F002A0019 /* NSMutableString+SafeKit.m in Sources */,
 			);
@@ -508,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A15B3071C770DEF002A0019 /* NSDictionaryTests.m in Sources */,
 				2A15B2D01C730050002A0019 /* NSMutableStringTests.m in Sources */,
 				2A15B2D21C730050002A0019 /* NSStringTests.m in Sources */,
 				2A15B2CD1C730050002A0019 /* NSArrayTests.m in Sources */,
@@ -750,6 +760,7 @@
 				2A15B2E31C73010A002A0019 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A6892461C72FC4600452E1D /* Build configuration list for PBXProject "SafeKitExample" */ = {
 			isa = XCConfigurationList;

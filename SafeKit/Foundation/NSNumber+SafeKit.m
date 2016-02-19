@@ -9,7 +9,7 @@
 #import "NSNumber+SafeKit.h"
 #import "NSObject+swizzle.h"
 
-@implementation NSNumber(SafeKit)
+@implementation NSNumber (SafeKit)
 
 - (BOOL)safe_isEqualToNumber:(NSNumber *)number {
     if (!number) {
@@ -25,7 +25,7 @@
     return [self safe_compare:number];
 }
 
-+ (void)load{
++ (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [self safe_swizzleMethod:@selector(safe_isEqualToNumber:) tarClass:@"__NSCFNumber" tarSel:@selector(isEqualToNumber:)];

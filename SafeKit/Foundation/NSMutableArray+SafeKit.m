@@ -9,7 +9,7 @@
 #import "NSMutableArray+SafeKit.h"
 #import "NSObject+swizzle.h"
 
-@implementation NSMutableArray(SafeKit)
+@implementation NSMutableArray (SafeKit)
 
 - (id)safe_objectAtIndex:(NSUInteger)index {
     if (index >= [self count]) {
@@ -18,7 +18,7 @@
     return [self safe_objectAtIndex:index];
 }
 
-- (void)safe_addObject:(id)anObject{
+- (void)safe_addObject:(id)anObject {
     if (!anObject) {
         return;
     }

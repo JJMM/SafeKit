@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString(SafeKit)
+@interface NSString (SafeKit)
 
 @end

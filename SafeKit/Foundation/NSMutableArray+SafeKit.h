@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSMutableArray(SafeKit)
+@interface NSMutableArray (SafeKit)
 
 @end
 

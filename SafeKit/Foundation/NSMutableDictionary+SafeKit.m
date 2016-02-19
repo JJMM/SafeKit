@@ -9,7 +9,7 @@
 #import "NSMutableDictionary+SafeKit.h"
 #import "NSObject+swizzle.h"
 
-@implementation NSMutableDictionary(SafeKit)
+@implementation NSMutableDictionary (SafeKit)
 
 - (void)safe_removeObjectForKey:(id)aKey {
     if (!aKey) {

@@ -37,4 +37,9 @@
     [self.array arrayByAddingObject:value];
 }
 
+- (void)testLiterals {
+    id value = nil;
+    self.array = @[@"0", @"1", @"2", value ,@"4"];
+}
+
 @end
