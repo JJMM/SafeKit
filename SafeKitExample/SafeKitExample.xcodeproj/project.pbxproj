@@ -27,6 +27,7 @@
 		2A15B3021C730162002A0019 /* libSafeKitLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A15B2DB1C73010A002A0019 /* libSafeKitLib.a */; };
 		2A15B3051C770A1A002A0019 /* NSDictionary+SafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A15B3041C770A1A002A0019 /* NSDictionary+SafeKit.m */; };
 		2A15B3071C770DEF002A0019 /* NSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A15B3061C770DEF002A0019 /* NSDictionaryTests.m */; };
+		2A15B3681C7733FC002A0019 /* NSMutableArray+SafeKitMRC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A15B3671C7733FC002A0019 /* NSMutableArray+SafeKitMRC.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2A6892501C72FC4600452E1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A68924F1C72FC4600452E1D /* main.m */; };
 		2A6892531C72FC4600452E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6892521C72FC4600452E1D /* AppDelegate.m */; };
 		2A6892591C72FC4600452E1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6892571C72FC4600452E1D /* Main.storyboard */; };
@@ -113,6 +114,8 @@
 		2A15B3031C770A1A002A0019 /* NSDictionary+SafeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeKit.h"; sourceTree = "<group>"; };
 		2A15B3041C770A1A002A0019 /* NSDictionary+SafeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeKit.m"; sourceTree = "<group>"; };
 		2A15B3061C770DEF002A0019 /* NSDictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryTests.m; sourceTree = "<group>"; };
+		2A15B3661C7733FC002A0019 /* NSMutableArray+SafeKitMRC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeKitMRC.h"; sourceTree = "<group>"; };
+		2A15B3671C7733FC002A0019 /* NSMutableArray+SafeKitMRC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafeKitMRC.m"; sourceTree = "<group>"; };
 		2A68924B1C72FC4600452E1D /* SafeKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A68924F1C72FC4600452E1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2A6892511C72FC4600452E1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -188,6 +191,7 @@
 		2A15B2E41C73014F002A0019 /* SafeKit */ = {
 			isa = PBXGroup;
 			children = (
+				2A15B3621C7733B7002A0019 /* MRC */,
 				2A15B2E51C73014F002A0019 /* Foundation */,
 				2A15B2F31C73014F002A0019 /* SafeCore */,
 				2A15B2F81C73014F002A0019 /* SafeKit.h */,
@@ -227,6 +231,15 @@
 				2A15B2F71C73014F002A0019 /* SafeKitMacro.h */,
 			);
 			path = SafeCore;
+			sourceTree = "<group>";
+		};
+		2A15B3621C7733B7002A0019 /* MRC */ = {
+			isa = PBXGroup;
+			children = (
+				2A15B3661C7733FC002A0019 /* NSMutableArray+SafeKitMRC.h */,
+				2A15B3671C7733FC002A0019 /* NSMutableArray+SafeKitMRC.m */,
+			);
+			path = MRC;
 			sourceTree = "<group>";
 		};
 		2A6892421C72FC4600452E1D = {
@@ -491,6 +504,7 @@
 				2A15B2FE1C73014F002A0019 /* NSString+SafeKit.m in Sources */,
 				2A15B2E01C73010A002A0019 /* SafeKitLib.m in Sources */,
 				2A15B2FD1C73014F002A0019 /* NSNumber+SafeKit.m in Sources */,
+				2A15B3681C7733FC002A0019 /* NSMutableArray+SafeKitMRC.m in Sources */,
 				2A15B3051C770A1A002A0019 /* NSDictionary+SafeKit.m in Sources */,
 				2A15B2FB1C73014F002A0019 /* NSMutableDictionary+SafeKit.m in Sources */,
 				2A15B2FC1C73014F002A0019 /* NSMutableString+SafeKit.m in Sources */,

@@ -63,6 +63,10 @@
     @"[dictionary setObject:nil forKey:nil];\n"\
     @"[dictionary removeObjectForKey:nil];\n"\
     @"// No.It work very well.\n";
+    
+    UITextField *tt = [[UITextField alloc] initWithFrame:CGRectMake(10, 200, 300, 50)];
+    tt.backgroundColor = [UIColor redColor];
+    [self.view addSubview:tt];
 }
 
 @end

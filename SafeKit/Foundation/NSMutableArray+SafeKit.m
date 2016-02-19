@@ -11,13 +11,6 @@
 
 @implementation NSMutableArray (SafeKit)
 
-- (id)safe_objectAtIndex:(NSUInteger)index {
-    if (index >= [self count]) {
-        return nil;
-    }
-    return [self safe_objectAtIndex:index];
-}
-
 - (void)safe_addObject:(id)anObject {
     if (!anObject) {
         return;
@@ -55,7 +48,6 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [self safe_swizzleMethod:@selector(safe_objectAtIndex:) tarClass:@"__NSArrayM" tarSel:@selector(objectAtIndex:)];
         [self safe_swizzleMethod:@selector(safe_addObject:) tarClass:@"__NSArrayM" tarSel:@selector(addObject:)];
         [self safe_swizzleMethod:@selector(safe_insertObject:atIndex:) tarClass:@"__NSArrayM" tarSel:@selector(insertObject:atIndex:)];
         [self safe_swizzleMethod:@selector(safe_removeObjectAtIndex:) tarClass:@"__NSArrayM" tarSel:@selector(removeObjectAtIndex:)];
