@@ -11,7 +11,7 @@
 
 @implementation NSArray (SafeKit)
 
-- (instancetype)initWithObjects_safe:(const id  _Nonnull __unsafe_unretained *)objects count:(NSUInteger)cnt {
+- (instancetype)initWithObjects_safe:(id *)objects count:(NSUInteger)cnt {
     NSUInteger newCnt = 0;
     for (NSUInteger i = 0; i < cnt; i++) {
         if (!objects[i]) {
