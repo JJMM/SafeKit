@@ -23,6 +23,7 @@ Pod::Spec.new do |s|
   s.subspec 'MRC' do |ss|
     ss.requires_arc = false
     ss.compiler_flags = '-ObjC'
+    ss.dependency 'SafeKit/SafeCore'
     ss.source_files = 'SafeKit/MRC/*'
   end
 end
