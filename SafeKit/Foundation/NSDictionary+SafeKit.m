@@ -26,7 +26,7 @@
 + (void) load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [self safe_swizzleMethod:@selector(initWithObjects_safe:forKeys:count:) tarClass:@"__NSPlaceholderDictionary" tarSel:@selector(initWithObjects:forKeys:count:)]; // for literals
+        [self safe_swizzleMethod:@selector(initWithObjects_safe:forKeys:count:) tarClass:@"__NSPlaceholderDictionary" tarSel:@selector(initWithObjects:forKeys:count:)];
     });
 }
 
