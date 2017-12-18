@@ -30,6 +30,20 @@
     return [self safe_objectAtIndex:index];
 }
 
+- (id)safe_objectAtIndexedSubscript:(NSUInteger)index {
+    if (index >= [self count]) {
+        return nil;
+    }
+    return [self safe_objectAtIndexedSubscript:index];
+}
+
+- (id)safe_objectAtIndexForNSArray0:(NSUInteger)index {
+    if (index >= [self count]) {
+        return nil;
+    }
+    return [self safe_objectAtIndexForNSArray0:index];
+}
+
 - (NSArray *)safe_arrayByAddingObject:(id)anObject {
     if (!anObject) {
         return self;
@@ -43,7 +57,12 @@
         [self safe_swizzleMethod:@selector(initWithObjects_safe:count:) tarClass:@"__NSPlaceholderArray" tarSel:@selector(initWithObjects:count:)];
         [self safe_swizzleMethod:@selector(safe_objectAtIndex:) tarClass:@"__NSArrayI" tarSel:@selector(objectAtIndex:)];
         [self safe_swizzleMethod:@selector(safe_arrayByAddingObject:) tarClass:@"__NSArrayI" tarSel:@selector(arrayByAddingObject:)];
+        
+        // FIXED: ios 11 crash: index 0 beyond bounds for empty array
+        [self safe_swizzleMethod:@selector(safe_objectAtIndexedSubscript:) tarClass:@"__NSArrayM" tarSel:@selector(objectAtIndexedSubscript:)];
+        [self safe_swizzleMethod:@selector(safe_objectAtIndexForNSArray0:) tarClass:@"__NSArray0" tarSel:@selector(objectAtIndex:)];
     });
 }
 
 @end
+
